@@ -1,0 +1,16 @@
+$weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+
+@function wiegth($weight) {
+  @return map-get($weights, $weight)
+};
+
+@each $name, $weight in $weights {
+  .ess.font-#{$name} {
+    font-weight: wiegth($name);
+  }
+}

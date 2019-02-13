@@ -3,7 +3,7 @@ $colors: (
   orange: #F39C12,
   yellow: #F1C40F, 
   green: #2ECC71, 
-  turquesa: #1ABC9C, 
+  turquoise: #1ABC9C, 
   blue: #0084FF, 
   purple: #9B59B6, 
   dark-blue: #34495E, 
@@ -16,26 +16,41 @@ $colors: (
 @each $name, $hex in $colors {
   .ess.font-#{$name} {
     color: color($name) !important;
-  };
+  }
 }
 
 @each $name, $hex in $colors {
   .ess.bg-#{$name} {
     color: #FFFFFF;
     background: color($name);
-  };
+  }
 }
 
 @each $name, $hex in $colors {
-  .ess.border-#{$name} {
-    border: solid 1px color($name);
-  };
+  .ess.bg-flat-#{$name} {
+    color: color($name);
+    background: transparent;
+  }
+}
+
+@each $name, $hex in $colors {
+  .ess.bg-border-#{$name} {
+    color: color($name);
+    background: transparent;
+    border: solid 1px color($name) !important;
+  }
 }
 
 @each $name, $hex in $colors {
   .ess.light-#{$name} {
     box-shadow: 0px 4px 16px rgba($hex, 0.5);
-  };
+  }
+}
+
+@each $name, $hex in $colors {
+  .ess.light-#{$name}-hover:hover {
+    box-shadow: 0px 4px 16px rgba($hex, 0.5);
+  }
 }
 
 
