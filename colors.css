@@ -1,0 +1,173 @@
+.ess.bg-red {
+  color: #ffffff;
+  background: var(--color-red);
+}
+
+.ess.bg-outline-red {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-blue);
+}
+
+.ess.bg-orange {
+  color: #ffffff;
+  background: var(--color-orange);
+}
+
+.ess.bg-outline-orange {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-orange);
+}
+
+.ess.bg-yellow {
+  color: #ffffff;
+  background: var(--color-yellow);
+}
+
+.ess.bg-outline-yellow {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-yellow);
+}
+
+.ess.bg-green {
+  color: #ffffff;
+  background: var(--color-green);
+}
+
+.ess.bg-outline-green {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-green);
+}
+
+.ess.bg-turquesa {
+  color: #ffffff;
+  background: var(--color-turquesa);
+}
+
+.ess.bg-outline-turquesa {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-turquesa);
+}
+
+.ess.bg-blue {
+  color: #ffffff;
+  background: var(--color-blue);
+}
+
+.ess.bg-outline-blue {
+  color:  var(--color-blue);
+  background: transparent;
+  border: 1px solid  var(--color-blue);
+}
+
+.ess.bg-purple {
+  color: #ffffff;
+  background: var(--color-purple);
+}
+
+.ess.bg-outline-purple {
+  color:  var(--color-red);
+  background: transparent;
+  border: 1px solid  var(--color-purple);
+}
+
+.ess.bg-dark-blue {
+  color: #ffffff;
+  background: var(--color-dark-blue);
+}
+
+.ess.bg-outline-dark-blue {
+  color:  var(--color-dark-blue);
+  background: transparent;
+  border: 1px solid  var(--color-dark-blue);
+}
+
+.ess.bg-primary {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.ess.bg-outline-primary {
+  color:  var(--color-primary);
+  background: transparent;
+  border: 1px solid  var(--color-primary);
+}
+
+.ess.bg-secondary {
+  color: #ffffff;
+  background: var(--color-secondary);
+}
+
+.ess.bg-outline-secondary {
+  color:  var(--color-secondary);
+  background: transparent;
+  border: 1px solid  var(--color-secondary);
+}
+
+.ess.light-red {
+  box-shadow: 0px 4px 16px rgba(231, 76, 60, 0.5);
+}
+
+.ess.light-red-hover:hover {
+  box-shadow: 0px 4px 16px rgba(231, 76, 60, 0.5);
+}
+
+.ess.light-orange {
+  box-shadow: 0px 4px 16px rgba(243, 156, 18, 0.5);
+}
+
+.ess.light-orange-hover:hover {
+  box-shadow: 0px 4px 16px rgba(243, 156, 18, 0.5);
+}
+
+.ess.light-yellow {
+  box-shadow: 0px 4px 16px rgba(241, 196, 15, 0.5);
+}
+
+.ess.light-yellow-hover:hover {
+  box-shadow: 0px 4px 16px rgba(241, 196, 15, 0.5);
+}
+
+.ess.light-green {
+  box-shadow: 0px 4px 16px rgba(46, 204, 113, 0.5);
+}
+
+.ess.light-green-hover:hover {
+  box-shadow: 0px 4px 16px rgba(46, 204, 113, 0.5);
+}
+
+.ess.light-turquesa {
+  box-shadow: 0px 4px 16px rgba(26, 188, 156, 0.5);
+}
+
+.ess.light-turquesa-hover:hover {
+  box-shadow: 0px 4px 16px rgba(26, 188, 156, 0.5);
+}
+
+.ess.light-blue {
+  box-shadow: 0px 4px 16px rgba(0, 132, 255, 0.5);
+}
+
+.ess.light-blue-hover:hover {
+  box-shadow: 0px 4px 16px rgba(0, 132, 255, 0.5);
+}
+
+.ess.light-purple {
+  box-shadow: 0px 4px 16px rgba(155, 89, 182, 0.5);
+}
+
+.ess.light-purple-hover:hover {
+  box-shadow: 0px 4px 16px rgba(155, 89, 182, 0.5);
+}
+
+.ess.light-dark-blue {
+  box-shadow: 0px 4px 16px rgba(52, 73, 94, 0.5);
+}
+
+.ess.light-dark-blue-hover:hover {
+  box-shadow: 0px 4px 16px rgba(52, 73, 94, 0.5);
+}

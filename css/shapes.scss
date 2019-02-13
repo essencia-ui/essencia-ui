@@ -1,0 +1,44 @@
+$corners: (
+  s3: 3px,
+  s6: 6px,
+  s9: 9px,
+  s12: 12px,
+);
+
+@function corner($size) {
+  @return map-get($corners, $size);
+};
+
+.ess.pill {
+  border-radius: 9999px;
+}
+
+@each $corner, $size in $corners {
+  .ess.rounded.#{$corner} {
+    border-radius: corner($corner);
+  };
+}
+
+.ess.rounded.tl {
+  border-top-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+  border-bottom-right-radius: 0; 
+}
+
+.ess.rounded.tr {
+  border-top-left-radius: 0; 
+  border-bottom-left-radius: 0; 
+  border-bottom-right-radius: 0; 
+}
+
+.ess.rounded.bl {
+  border-top-left-radius: 0; 
+  border-top-right-radius: 0; 
+  border-bottom-right-radius: 0; 
+}
+
+.ess.rounded.br {
+  border-top-left-radius: 0; 
+  border-top-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+}

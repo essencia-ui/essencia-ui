@@ -1,0 +1,30 @@
+button.ess,
+submit.ess,
+input[type="submit"].ess {
+  margin: 0;
+  width: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 0;
+  min-width: 128px;
+  font-size: 12px;
+  overflow: visible;
+  text-align: center;
+  line-height: normal;
+  background: #DDDDDD;
+  display: inline-block;
+  -webkit-appearance: none;
+  transition: 300ms all ease-in;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  font-family: 'Raleway', sans-serif;
+}
+
+button.ess:disabled,
+submit.ess:disabled,
+input[type="submit"].ess:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}

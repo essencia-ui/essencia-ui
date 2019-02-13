@@ -1,0 +1,44 @@
+.ess.pill {
+  border-radius: 9999px;
+}
+
+.ess.rounded.s3 {
+  border-radius: 3px;
+}
+
+.ess.rounded.s6 {
+  border-radius: 6px;
+}
+
+.ess.rounded.s9 {
+  border-radius: 9px;
+}
+
+.ess.rounded.s12 {
+  border-radius: 12px;
+}
+
+.ess.rounded.tl {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ess.rounded.tr {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ess.rounded.bl {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ess.rounded.br {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/*# sourceMappingURL=shapes.css.map */

@@ -1,0 +1,43 @@
+.ess.pill {
+  border-radius: 9999px;
+}
+
+.ess.rounded {
+  border-radius: 3px;
+}
+
+.ess.rounded.r6 {
+  border-radius: 6px;
+}
+
+.ess.rounded.r9 {
+  border-radius: 9px;
+}
+
+.ess.rounded.r12 {
+  border-radius: 12px;
+}
+
+.ess.rounded.tl {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ess.rounded.tr {
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ess.rounded.br {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.ess.rounded.bl {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
