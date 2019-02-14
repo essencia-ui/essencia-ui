@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @import "./button.scss";
+@import "./input-text.scss";
 @import "./colors.scss";
 @import "./shapes.scss";
 @import "./typography.scss";

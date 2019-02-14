@@ -10,7 +10,7 @@ $weights: (
 };
 
 @each $name, $weight in $weights {
-  .ess.font-#{$name} {
+  html .ess.font-#{$name} {
     font-weight: wiegth($name);
   }
 }

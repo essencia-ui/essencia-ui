@@ -17,42 +17,83 @@ $colors: (
 };
 
 @each $name, $hex in $colors {
-  .ess.font-#{$name} {
+  html .ess.font-#{$name} {
     color: color($name) !important;
   }
 }
 
 @each $name, $hex in $colors {
-  .ess.bg-#{$name} {
+  html .ess.bg-#{$name} {
     color: #FFFFFF;
     background: color($name);
   }
+
+  html input[type=text].ess.bg-#{$name} {
+    border: none;
+    color: #FFFFFF;
+  }
+  
+  html input[type=text].ess.bg-#{$name}::placeholder {
+    color: #FFFFFF;
+  }
+  
+  html input[type=text].ess.bg-#{$name}:focus {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
 }
 
 @each $name, $hex in $colors {
-  .ess.bg-flat-#{$name} {
+  html .ess.bg-flat-#{$name} {
     color: color($name);
     background: transparent;
   }
+
+  html input[type=text].ess.bg-flat-#{$name} {
+    border: none;
+    color: color($name);
+    box-shadow: 0px 0px 16px rgba(#D7D7D7, 0.8);
+  }
+
+  html input[type=text].ess.bg-flat-#{$name}:focus {
+    box-shadow: 0px 4px 24px rgba(#D7D7D7, 0.8);
+  }
 }
 
 @each $name, $hex in $colors {
-  .ess.bg-border-#{$name} {
+  html .ess.bg-border-#{$name} {
     color: color($name);
     background: transparent;
-    border: solid 1px color($name) !important;
+    border: solid 1px color($name);
+  }
+  
+  html input[type=text].ess.bg-border-#{$name} {
+    color: #A1A1A1;
+    border: 1px solid #CCCCCC;
+  }
+  
+  html input[type=text].ess.bg-border-#{$name}:focus {
+    color: color($name);
+    background: transparent;
+    border: solid 1px color($name);
   }
 }
 
 @each $name, $hex in $colors {
-  .ess.light-#{$name} {
-    box-shadow: 0px 4px 16px rgba($hex, 0.5);
+  html .ess.light-#{$name} {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
   }
 }
 
 @each $name, $hex in $colors {
-  .ess.light-#{$name}-hover:hover {
-    box-shadow: 0px 4px 16px rgba($hex, 0.5);
+  html .ess.light-#{$name}-hover:hover {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+}
+
+@each $name, $hex in $colors {
+  html .ess.light-#{$name}-focus:focus {
+    border: none;
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
   }
 }
 

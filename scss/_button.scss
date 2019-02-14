@@ -6,20 +6,19 @@ input[type="submit"].ess {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 12px 42px;
   font-size: 12px;
-  // font-weight: 700;
+  font-weight: 700;
   overflow: visible;
-  text-align: center;
+  padding: 12px 42px;
   line-height: normal;
-  // background: #DDDDDD;
+  text-align: justify;
+  background: #DDDDDD;
   display: inline-block;
   -webkit-appearance: none;
   transition: 100ms all ease-in;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   font-family: 'Raleway', sans-serif;
-  text-align: justify;
 }
 
 button.ess:disabled,

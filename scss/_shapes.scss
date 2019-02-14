@@ -9,12 +9,12 @@ $corners: (
   @return map-get($corners, $size);
 };
 
-.ess.pill {
+html .ess.pill {
   border-radius: 9999px;
 }
 
 @each $corner, $size in $corners {
-  .ess.rounded-#{$corner} {
+  html .ess.rounded-#{$corner} {
     border-radius: corner($corner);
   }
 }
