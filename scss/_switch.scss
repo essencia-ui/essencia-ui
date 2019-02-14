@@ -1,0 +1,66 @@
+.ess.switch {
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.ess.switch > input[type=checkbox] {
+  position: absolute;
+  left: -99999px;
+}
+
+.ess.switch > input[type=checkbox] + label {
+  cursor: pointer;
+  padding-left: 48px;
+  font-size: 14px;
+}
+
+.ess.switch > input[type=checkbox] + label:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 100px;
+  transition: .15s;
+}
+
+.ess.switch > input[type=checkbox]:checked + label:before {
+  // background: #000000;
+}
+
+.ess.switch > input[type=checkbox] + label:after {
+  top: 4px;
+  left: 4px;
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 100px;
+  display: inline-block;
+  background: #000000;
+  animation: uncheck-switch 300ms forwards ease-in-out;
+}
+
+.ess.switch > input[type=checkbox]:checked + label:after {
+  animation: check-switch 300ms forwards ease-in-out;
+}
+
+@keyframes check-switch {
+  0%   {left: 4px; width: 12px;}
+  50%   {left: 12px; width: 20px;}
+  100%  {left: 24px; width: 12px;}
+  // 100%   {left: 24px;}
+  // 100% {left: 24px;  width: 12px; transform: rotate(-45deg);}
+}
+
+@keyframes uncheck-switch {
+  0%   {left: 24px; width: 12px;}
+  50%   {left: 12px; width: 20px;}
+  100%  {left: 4px; width: 12px;}
+}
