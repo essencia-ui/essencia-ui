@@ -44,23 +44,23 @@
   border-radius: 100px;
   display: inline-block;
   background: #000000;
-  animation: uncheck-switch 300ms forwards ease-in-out;
+  animation: uncheck-switch 150ms forwards ease-in-out;
 }
 
 .ess.switch > input[type=checkbox]:checked + label:after {
-  animation: check-switch 300ms forwards ease-in-out;
+  animation: check-switch 150ms forwards ease-in-out;
 }
 
 @keyframes check-switch {
-  0%   {left: 4px; width: 12px;}
+  0%   {left: 8px; width: 12px;}
   50%   {left: 12px; width: 20px;}
-  100%  {left: 24px; width: 12px;}
+  100%  {left: 22px; width: 12px;}
   // 100%   {left: 24px;}
   // 100% {left: 24px;  width: 12px; transform: rotate(-45deg);}
 }
 
 @keyframes uncheck-switch {
-  0%   {left: 24px; width: 12px;}
+  0%   {left: 22px; width: 12px;}
   50%   {left: 12px; width: 20px;}
-  100%  {left: 4px; width: 12px;}
+  100%  {left: 6px; width: 12px;}
 }
