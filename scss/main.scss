@@ -4,13 +4,15 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-@import "./button.scss";
-@import "./input-text.scss";
-@import "./checkbox.scss";
-@import "./radio.scss";
-@import "./switch.scss";
-@import "./colors.scss";
-@import "./shapes.scss";
-@import "./typography.scss";
+@import "./colors";
+@import "./shapes";
+@import "./typography";
+@import "./button";
+
+@import "./forms/input-text";
+@import "./forms/checkbox";
+@import "./forms/radio";
+@import "./forms/switch";

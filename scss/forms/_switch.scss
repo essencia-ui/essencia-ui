@@ -1,0 +1,51 @@
+@import "./mixins/checkers";
+
+.ess.switch {
+  margin: 0 10px;
+  font-weight: 700;
+  padding-left: 48px;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+}
+
+.ess.switch label {
+  cursor: pointer;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.ess.switch input[type=checkbox] {
+  margin: 0;
+  content: '';
+  outline: none;
+  transition: .15s;
+  appearance: none;
+  border: 2px solid #000000;
+  @include checker(40px, 20px, 0, 0, 100px);
+}
+
+.ess.switch input[type=checkbox]::after {
+  content: '';
+  background: #000000;
+  @include checker(12px, 12px, 2px, 2px, 100px);
+  animation: uncheck-switch 150ms forwards ease-in-out;
+}
+
+.ess.switch input[type=checkbox]:checked::after {
+  animation: check-switch 150ms forwards ease-in-out;
+}
+
+@keyframes check-switch {
+  0%   {left: 8px; width: 12px;}
+  50%   {left: 12px; width: 20px;}
+  100%  {left: 22px; width: 12px;}
+  // 100%   {left: 24px;}
+  // 100% {left: 24px;  width: 12px; transform: rotate(-45deg);}
+}
+
+@keyframes uncheck-switch {
+  0%   {left: 22px; width: 12px;}
+  50%   {left: 12px; width: 20px;}
+  100%  {left: 2px; width: 12px;}
+}
