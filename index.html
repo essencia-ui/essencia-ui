@@ -12,14 +12,103 @@
 <body>
   <div>
 
-    <button class="ess rounded-s3">Essencia 1</button>
-    <button class="ess rounded-s3 font-regular">Essencia 2</button>
-    <button class="ess rounded-s3 bg-green light-green-hover" disabled>Essencia 3</button>
+    <!-- Inputs  -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Buttons</h3>
+    <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
+      <div style="display: inline-block; margin: 0 10px;">
+        <legend>Normal</legend>
+        <div style="margin: 10px 0;">
+          <button class="ess">Elemet Button</button>
+        </div>
+        <div style="margin: 10px 0;">
+          <submit class="ess rounded-s6">Elemet Submit</submit>
+        </div>
+        <div style="margin: 10px 0;">
+          <input type="submit" class="ess rounded-s12" value="Input tp submit"/>
+        </div>
+        <div style="margin: 10px 0;">
+          <input type="button" class="ess pill" value="Input tp button"/>
+        </div>
+      </div>
 
-    <input class="ess rounded-s6 bg-blue" type="text" placeholder="Write something here..." />
-    <input class="ess rounded-s6 bg-flat-blue" type="text" placeholder="Write something here..." />
+      <div style="display: inline-block; margin: 0 10px;">
+        <legend>bg-color</legend>
+        <div style="margin: 10px 0;">
+          <button class="ess bg-green">Elemet Button</button>
+        </div>
+        <div style="margin: 10px 0;">
+          <submit class="ess bg-yellow rounded-s6">Elemet Submit</submit>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-red rounded-s12" type="submit" value="Input tp submit"/>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-purple pill" type="button" value="Input tp button"/>
+        </div>
+      </div>
 
-    <div style="margin: 20px">
+      <div style="display: inline-block; margin: 0 10px;">
+        <legend>bg-flat</legend>
+        <div style="margin: 10px 0;">
+          <button class="ess bg-flat-turquoise">Elemet Button</button>
+        </div>
+        <div style="margin: 10px 0;">
+          <submit class="ess bg-flat-turquoise rounded-s6">Elemet Submit</submit>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-flat-dark-blue rounded-s12" type="submit" value="Input tp submit"/>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-flat-dark-blue pill" type="button" value="Input tp button"/>
+        </div>
+      </div>
+
+      <div style="display: inline-block; margin: 0 10px;">
+        <legend>bg-border</legend>
+        <div style="margin: 10px 0;">
+          <button class="ess bg-border-blue">Elemet Button</button>
+        </div>
+        <div style="margin: 10px 0;">
+          <submit class="ess bg-border-blue rounded-s6">Elemet Submit</submit>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-border-orange rounded-s12" type="submit" value="Input tp submit"/>
+        </div>
+        <div style="margin: 10px 0;">
+          <input class="ess bg-border-orange pill" type="button" value="Input tp button"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inputs  -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Inputs</h3>
+    <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
+      <div class="ess text-input" >
+        <input id="input-text" class="ess rounded-s6 " type="text" placeholder="Digite seu nome completo" />
+        <label class="ess" for="input-text">Nome</label>
+      </div>
+      <div class="ess text-input" >
+        <input class="ess rounded-s6 bg-border-blue" type="text" placeholder="Digite apenas os numeros" />
+        <label class="ess">CPF</label>
+      </div>
+    </div>
+
+    <!-- Inputs Flats -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Inputs Flats</h3>
+    <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
+      <div class="ess text-input">
+        <input id="input-text" class="ess rounded-s6 bg-flat-blue " type="text" placeholder="Digite o Logradouro com numero" />
+        <label class="ess" for="input-text">Logradouro</label>
+      </div>
+      <div class="ess text-input">
+        <input id="input-text" class="ess rounded-s6 bg-blue" type="text" placeholder="(xx) xxxxx-xxxx" />
+        <label class="ess" >Celular</label>
+      </div>
+    </div>
+
+    <!-- Select Checkbox -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Select Checkbox</h3>
+    <div style="margin: 10px 20px 20px;border: 1px solid #dedede; padding: 20px 10px;">
       <div class="ess checkbox">
         <label for="check1"> 
           Select this checkbox. 
@@ -32,7 +121,9 @@
         </div>
     </div>
 
-    <div style="margin: 20px">
+    <!-- Radios -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Radios</h3>
+    <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
       <div class="ess radio">
         <label for="radio1"> 
           Select this radio. 
@@ -46,7 +137,9 @@
       </div>
     </div>
    
-    <div style="margin: 20px">
+    <!-- Select Switchs -->
+    <h3 style="margin: 30px 0 0px 20px; color: #444">- Select Switchs</h3>
+    <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
       <div class="ess switch">
         <label for="switch1"> 
           Select this checkbox. 
@@ -61,6 +154,9 @@
     </div>
 
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </body>
 
 </html>

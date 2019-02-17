@@ -7,10 +7,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+@import "./button";
 @import "./colors";
 @import "./shapes";
 @import "./typography";
-@import "./button";
 
 @import "./forms/input-text";
 @import "./forms/checkbox";

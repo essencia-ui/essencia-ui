@@ -29,3 +29,10 @@ input[type="submit"].ess:disabled {
   cursor: not-allowed;
   box-shadow: none !important;
 }
+
+button.ess:hover,
+submit.ess:hover,
+input[type="button"].ess:hover,
+input[type="submit"].ess:hover {
+  background: darken(#DDDDDD, 10%);
+}

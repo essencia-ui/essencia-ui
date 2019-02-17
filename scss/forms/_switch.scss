@@ -2,7 +2,7 @@
 
 .ess.switch {
   margin: 0 10px;
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 48px;
   user-select: none;
   position: relative;
@@ -21,13 +21,13 @@
   outline: none;
   transition: .15s;
   appearance: none;
-  border: 2px solid #000000;
+  border: 2px solid #444444;
   @include checker(40px, 20px, 0, 0, 100px);
 }
 
 .ess.switch input[type=checkbox]::after {
   content: '';
-  background: #000000;
+  background: #333333;
   @include checker(12px, 12px, 2px, 2px, 100px);
   animation: uncheck-switch 150ms forwards ease-in-out;
 }
