@@ -1,4 +1,5 @@
 @import "./mixins/checkers";
+@import "../colors/mixins/colors-mixin";
 
 .ess.radio {
   margin: 0 10px;
@@ -46,4 +47,16 @@
   50%  {transform: scale(1.8);}
   75%  {transform: scale(0.8);}
   100% {transform: scale(1);}
+}
+
+@each $name, $hex in $colors {
+  .ess.radio input[type=radio].bg-#{$name} {
+    background: transparent;
+    border: 2px solid color($name);
+  }
+
+  .ess.radio input[type=radio].bg-#{$name}:checked::after {
+    background: color($name);
+    border: 2px solid color($name);
+  }
 }

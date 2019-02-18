@@ -1,0 +1,17 @@
+$colors: (
+  red: #E74C3C,
+  orange: #F39C12,
+  yellow: #F1C40F, 
+  green: #2ECC71, 
+  turquoise: #1ABC9C,
+  // essencial-blue1: #19b5fe,
+  // essencial-blue2: #22a7f0,
+  // essencial-blue3: #6186FF,
+  blue: #0084FF, 
+  purple: #9B59B6, 
+  dark-blue: #34495E, 
+);
+
+@function color($name) {
+  @return map-get($colors, $name)
+};

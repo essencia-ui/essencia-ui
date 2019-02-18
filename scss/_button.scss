@@ -1,3 +1,5 @@
+@import "./colors/mixins/colors-mixin";
+
 button.ess,
 submit.ess,
 input[type="button"].ess,
@@ -35,4 +37,33 @@ submit.ess:hover,
 input[type="button"].ess:hover,
 input[type="submit"].ess:hover {
   background: darken(#DDDDDD, 10%);
+}
+
+@each $name, $hex in $colors {
+  html input[type=submit].ess.bg-#{$name}:hover,
+  html input[type=button].ess.bg-#{$name}:hover,
+  html submit.ess.bg-#{$name}:hover,
+  html button.ess.bg-#{$name}:hover {
+    background: lighten($color: color($name), $amount: 8%) ;
+  }
+}
+
+@each $name, $hex in $colors {
+  html input[type=submit].ess.bg-flat-#{$name}:hover,
+  html input[type=button].ess.bg-flat-#{$name}:hover,
+  html submit.ess.bg-flat-#{$name}:hover,
+  html button.ess.bg-flat-#{$name}:hover {
+    background: #efefef;
+  }
+}
+
+@each $name, $hex in $colors {
+  html input[type=submit].ess.bg-border-#{$name}:hover,
+  html input[type=button].ess.bg-border-#{$name}:hover,
+  html submit.ess.bg-border-#{$name}:hover,
+  html button.ess.bg-border-#{$name}:hover {
+    background: transparent;
+    color: lighten($color: color($name), $amount: 15%);
+    border: solid 1px lighten($color: color($name), $amount: 15%) ;
+  }
 }

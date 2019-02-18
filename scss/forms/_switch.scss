@@ -1,4 +1,5 @@
 @import "./mixins/checkers";
+@import "../colors/mixins/colors-mixin";
 
 .ess.switch {
   margin: 0 10px;
@@ -48,4 +49,27 @@
   0%   {left: 22px; width: 12px;}
   50%   {left: 12px; width: 20px;}
   100%  {left: 2px; width: 12px;}
+}
+
+@each $name, $hex in $colors {
+  .ess.switch input[type=checkbox].bg-#{$name} {
+    background: transparent;
+    border: 2px solid color($name);
+  }
+
+  .ess.switch input[type=checkbox].bg-#{$name}:checked {
+    background: color($name);
+    border: 2px solid color($name);
+  }
+
+  .ess.switch input[type=checkbox].bg-#{$name}::after {
+    background: color($name);
+    border: 2px solid color($name);;
+  }
+
+  .ess.switch input[type=checkbox].bg-#{$name}:checked::after {
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+  }
+
 }

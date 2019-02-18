@@ -1,38 +1,17 @@
-$colors: (
-  red: #E74C3C,
-  orange: #F39C12,
-  yellow: #F1C40F, 
-  green: #2ECC71, 
-  turquoise: #1ABC9C,
-  // essencial-blue1: #19b5fe,
-  // essencial-blue2: #22a7f0,
-  // essencial-blue3: #6186FF,
-  blue: #0084FF, 
-  purple: #9B59B6, 
-  dark-blue: #34495E, 
-);
+@import "./mixins/colors-mixin";
 
-@function color($name) {
-  @return map-get($colors, $name)
-};
-
+// Fonts
 @each $name, $hex in $colors {
   html .ess.font-#{$name} {
-    color: color($name) !important;
+    color: color($name);
   }
 }
 
+// bg-color
 @each $name, $hex in $colors {
   html .ess.bg-#{$name} {
     color: #FFFFFF;
     background: color($name);
-  }
-
-  html input[type=submit].ess.bg-#{$name}:hover,
-  html input[type=button].ess.bg-#{$name}:hover,
-  html submit.ess.bg-#{$name}:hover,
-  html button.ess.bg-#{$name}:hover {
-    background: lighten($color: color($name), $amount: 8%) ;
   }
 
   html input[type=text].ess.bg-#{$name} {
@@ -49,20 +28,14 @@ $colors: (
   }
 }
 
+// bg-flat
 @each $name, $hex in $colors {
   html .ess.bg-flat-#{$name} {
     color: color($name);
     background: transparent;
   }
 
-  html input[type=submit].ess.bg-flat-#{$name}:hover,
-  html input[type=button].ess.bg-flat-#{$name}:hover,
-  html submit.ess.bg-flat-#{$name}:hover,
-  html button.ess.bg-flat-#{$name}:hover {
-    background: #efefef;
-  }
-
-  html input[type=text].ess.bg-flat-#{$name} {
+ html input[type=text].ess.bg-flat-#{$name} {
     border: none;
     color: color($name);
     box-shadow: 0px 0px 16px rgba(#D7D7D7, 0.8);
@@ -73,20 +46,12 @@ $colors: (
   }
 }
 
+// bg-border
 @each $name, $hex in $colors {
   html .ess.bg-border-#{$name} {
     color: color($name);
     background: transparent;
     border: solid 1px color($name);
-  }
-
-  html input[type=submit].ess.bg-border-#{$name}:hover,
-  html input[type=button].ess.bg-border-#{$name}:hover,
-  html submit.ess.bg-border-#{$name}:hover,
-  html button.ess.bg-border-#{$name}:hover {
-    background: transparent;
-    color: lighten($color: color($name), $amount: 15%);
-    border: solid 1px lighten($color: color($name), $amount: 15%) ;
   }
 
   html input[type=text].ess.bg-border-#{$name} {
@@ -101,22 +66,33 @@ $colors: (
   }
 }
 
+// light
 @each $name, $hex in $colors {
   html .ess.light-#{$name} {
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+    box-shadow: 0px 0px 16px rgba($hex, 0.6)!important;
   }
 }
 
+// light hover
 @each $name, $hex in $colors {
   html .ess.light-#{$name}-hover:hover {
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+    box-shadow: 0px 0px 16px rgba($hex, 0.6)!important;
   }
 }
 
+// light focus
 @each $name, $hex in $colors {
   html .ess.light-#{$name}-focus:focus {
     border: none;
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+    box-shadow: 0px 0px 16px rgba($hex, 0.6)!important;
+  }
+}
+
+// light checked
+@each $name, $hex in $colors {
+  html .ess.light-#{$name}-checked:checked {
+    border: none;
+    box-shadow: 0px 0px 16px rgba($hex, 0.6)!important;
   }
 }
 

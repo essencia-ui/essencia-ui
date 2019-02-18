@@ -34,7 +34,7 @@
       <div style="display: inline-block; margin: 0 10px;">
         <legend>bg-color</legend>
         <div style="margin: 10px 0;">
-          <button class="ess bg-green">Elemet Button</button>
+          <button class="ess bg-green light-green-hover">Elemet Button</button>
         </div>
         <div style="margin: 10px 0;">
           <submit class="ess bg-yellow rounded-s6">Elemet Submit</submit>
@@ -112,29 +112,39 @@
       <div class="ess checkbox">
         <label for="check1"> 
           Select this checkbox. 
-          <input id="check1" type="checkbox" />
+          <input id="check1" class="ess bg-blue" type="checkbox" />
         </label>
       </div>
       <div class="ess checkbox">
-          <input id="check2" type="checkbox" />
-          <label for="check2"> Select this checkbox. </label>
-        </div>
+        <input id="check2" class="ess bg-turquoise light-turquoise-checked" type="checkbox" />
+        <label for="check2"> Select this checkbox. </label>
+      </div>
+      <div class="ess checkbox">
+        <input id="check3" type="checkbox" />
+        <label for="check3"> Select this checkbox. </label>
+      </div>
     </div>
 
     <!-- Radios -->
     <h3 style="margin: 30px 0 0px 20px; color: #444">- Radios</h3>
     <div style="margin: 10px 20px 20px; border: 1px solid #dedede; padding: 20px 10px;">
       <div class="ess radio">
-        <label for="radio1"> 
+        <label> 
           Select this radio. 
-          <input id="radio1" name="radio" type="radio" checked/>
+          <input name="radio" class="ess bg-green" type="radio" checked/>
         </label>
       </div>
       
       <div class="ess radio">
-        <input id="radio2" name="radio" type="radio" checked/>
+        <input id="radio2" class="ess bg-red light-red-checked" name="radio" type="radio" checked/>
         <label for="radio2"> Select this radio. </label>
       </div>
+
+      <div class="ess radio">
+        <input id="radio3" name="radio" type="radio" checked/>
+        <label for="radio3"> Select this radio. </label>
+      </div>
+
     </div>
    
     <!-- Select Switchs -->
@@ -143,13 +153,18 @@
       <div class="ess switch">
         <label for="switch1"> 
           Select this checkbox. 
-          <input id="switch1" type="checkbox" checked/>
+          <input id="switch1" class="ess bg-orange" type="checkbox" checked/>
         </label>
       </div>
 
       <div class="ess switch">
-        <input id="switch2" type="checkbox" checked/>
+        <input id="switch2" class="ess bg-purple light-purple-checked" type="checkbox" checked/>
         <label for="switch2"> Select this checkbox. </label>
+      </div>
+      
+      <div class="ess switch">
+        <input id="switch3" type="checkbox" checked/>
+        <label for="switch3"> Select this checkbox. </label>
       </div>
     </div>
 
