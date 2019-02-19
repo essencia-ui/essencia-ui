@@ -13,19 +13,6 @@
     color: #FFFFFF;
     background: color($name);
   }
-
-  html input[type=text].ess.bg-#{$name} {
-    border: none;
-    color: #FFFFFF;
-  }
-  
-  html input[type=text].ess.bg-#{$name}::placeholder {
-    color: #DDDDDD;
-  }
-  
-  html input[type=text].ess.bg-#{$name}:focus {
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
-  }
 }
 
 // bg-flat
@@ -34,32 +21,11 @@
     color: color($name);
     background: transparent;
   }
-
- html input[type=text].ess.bg-flat-#{$name} {
-    border: none;
-    color: color($name);
-    box-shadow: 0px 0px 16px rgba(#D7D7D7, 0.8);
-  }
-
-  html input[type=text].ess.bg-flat-#{$name}:focus {
-    box-shadow: 0px 4px 24px rgba(#D7D7D7, 0.8);
-  }
 }
 
 // bg-border
 @each $name, $hex in $colors {
   html .ess.bg-border-#{$name} {
-    color: color($name);
-    background: transparent;
-    border: solid 1px color($name);
-  }
-
-  html input[type=text].ess.bg-border-#{$name} {
-    color: color($name);
-    border: 1px solid color($name);;
-  }
-  
-  html input[type=text].ess.bg-border-#{$name}:focus {
     color: color($name);
     background: transparent;
     border: solid 1px color($name);
