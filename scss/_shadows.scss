@@ -1,0 +1,67 @@
+@import "./mixins/colors";
+
+$dark-shadows-color: #000000;
+$light-shadows-color: #C8CFDB;
+
+$depths: (
+  depth-50: 0.50, 
+  depth-75: 0.75, 
+  depth-100: 1, 
+);
+
+// light shadows
+@each $name, $depth in $depths {
+  html .ess.shadow-light-#{$name} {
+    box-shadow: 0px 4px 16px rgba($light-shadows-color, $depth);
+  }
+  
+  html .ess.shadow-light-hover-#{$name}:hover {
+    box-shadow: 0px 4px 16px rgba($light-shadows-color, $depth);
+  }
+  
+  html .ess.shadow-light-focus-#{$name}:focus {
+    box-shadow: 0px 4px 16px rgba($light-shadows-color, $depth);
+  }
+  
+  html .ess.shadow-light-checked-#{$name}:checked {
+    box-shadow: 0px 4px 16px rgba($light-shadows-color, $depth);
+  }
+}
+
+// dark shadows
+@each $name, $depth in $depths {
+  html .ess.shadow-dark-#{$name} {
+    box-shadow: 0px 4px 16px rgba($dark-shadows-color, $depth);
+  }
+
+  html .ess.shadow-dark-hover-#{$name}:hover {
+    box-shadow: 0px 4px 16px rgba($dark-shadows-color, $depth);
+  }
+
+  html .ess.shadow-dark-focus-#{$name}:focus {
+    box-shadow: 0px 4px 16px rgba($dark-shadows-color, $depth);
+  }
+
+  html .ess.shadow-dark-checked-#{$name}:checked {
+    box-shadow: 0px 4px 16px rgba($dark-shadows-color, $depth);
+  }
+}
+
+// shadow color
+@each $name, $hex in $colors {
+  html .ess.shadow-#{$name} {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+
+  html .ess.shadow-#{$name}-hover:hover {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+
+  html .ess.shadow-#{$name}-focus:focus {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+
+  html .ess.shadow-#{$name}-checked:checked {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+}

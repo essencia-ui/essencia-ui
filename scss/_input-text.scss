@@ -1,0 +1,256 @@
+input[type=tel].ess,
+input[type=url].ess,
+input[type=text].ess,
+input[type=date].ess,
+input[type=time].ess,
+input[type=week].ess,
+input[type=email].ess,
+input[type=month].ess,
+input[type=number].ess,
+input[type=search].ess,
+input[type=password].ess,
+input[type=datetime-local].ess {
+  margin: 0;
+  outline: none;
+  font-size: 14px;
+  min-height: 42px;
+  min-width: 284px;
+  padding: 0px 20px;
+  overflow: visible;
+  text-align: justify;
+  line-height: normal;
+  font-weight: regular;
+  display: inline-block;
+  -webkit-appearance: none;
+  border: 1px solid #C8CFDB;
+  transition: 200ms all ease-in;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+input[type=tel].ess::placeholder,
+input[type=url].ess::placeholder,
+input[type=text].ess::placeholder,
+input[type=date].ess::placeholder,
+input[type=time].ess::placeholder,
+input[type=week].ess::placeholder,
+input[type=email].ess::placeholder,
+input[type=month].ess::placeholder,
+input[type=number].ess::placeholder,
+input[type=search].ess::placeholder,
+input[type=password].ess::placeholder,
+input[type=datetime-local].ess::placeholder {
+  transition: all 300ms ease-in-out;
+}
+
+input[type=tel].ess:focus::placeholder,
+input[type=url].ess:focus::placeholder,
+input[type=text].ess:focus::placeholder,
+input[type=date].ess:focus::placeholder,
+input[type=time].ess:focus::placeholder,
+input[type=week].ess:focus::placeholder,
+input[type=email].ess:focus::placeholder,
+input[type=month].ess:focus::placeholder,
+input[type=number].ess:focus::placeholder,
+input[type=search].ess:focus::placeholder,
+input[type=password].ess:focus::placeholder,
+input[type=datetime-local].ess:focus::placeholder {
+  transform: scale(.9);
+}
+
+input[type=tel].ess:disabled,
+input[type=url].ess:disabled,
+input[type=text].ess:disabled,
+input[type=date].ess:disabled,
+input[type=time].ess:disabled,
+input[type=week].ess:disabled,
+input[type=email].ess:disabled,
+input[type=month].ess:disabled,
+input[type=number].ess:disabled,
+input[type=search].ess:disabled,
+input[type=password].ess:disabled,
+input[type=datetime-local].ess:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+input[type=tel].ess.rounded,
+input[type=url].ess.rounded,
+input[type=text].ess.rounded,
+input[type=date].ess.rounded,
+input[type=time].ess.rounded,
+input[type=week].ess.rounded,
+input[type=email].ess.rounded,
+input[type=month].ess.rounded,
+input[type=number].ess.rounded,
+input[type=search].ess.rounded,
+input[type=password].ess.rounded,
+input[type=datetime-local].ess.rounded {
+  border-radius: 6px;
+}
+
+input[type=tel].ess.pill,
+input[type=url].ess.pill,
+input[type=date].ess.pill,
+input[type=text].ess.pill,
+input[type=time].ess.pill,
+input[type=week].ess.pill,
+input[type=month].ess.pill,
+input[type=email].ess.pill,
+input[type=number].ess.pill,
+input[type=search].ess.pill,
+input[type=password].ess.pill,
+input[type=datetime-local].ess.pill {
+  border-radius: 9999px;
+}
+
+@each $name, $hex in $colors {
+
+  input[type=tel].ess.fill-#{$name},
+  input[type=url].ess.fill-#{$name},
+  input[type=text].ess.fill-#{$name},
+  input[type=date].ess.fill-#{$name},
+  input[type=time].ess.fill-#{$name},
+  input[type=week].ess.fill-#{$name},
+  input[type=email].ess.fill-#{$name},
+  input[type=month].ess.fill-#{$name},
+  input[type=number].ess.fill-#{$name},
+  input[type=search].ess.fill-#{$name},
+  input[type=password].ess.fill-#{$name},
+  input[type=datetime-local].ess.fill-#{$name} {
+    border: none;
+    color: #FFFFFF;
+    background: color($name);
+  }
+
+  input[type=tel].ess.fill-#{$name}.illuminate:focus,
+  input[type=url].ess.fill-#{$name}.illuminate:focus,
+  input[type=text].ess.fill-#{$name}.illuminate:focus,
+  input[type=date].ess.fill-#{$name}.illuminate:focus,
+  input[type=time].ess.fill-#{$name}.illuminate:focus,
+  input[type=week].ess.fill-#{$name}.illuminate:focus,
+  input[type=email].ess.fill-#{$name}.illuminate:focus,
+  input[type=month].ess.fill-#{$name}.illuminate:focus,
+  input[type=number].ess.fill-#{$name}.illuminate:focus,
+  input[type=search].ess.fill-#{$name}.illuminate:focus,
+  input[type=password].ess.fill-#{$name}.illuminate:focus,
+  input[type=datetime-local].ess.fill-#{$name}.illuminate:focus {
+    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+  }
+
+  input[type=tel].ess.fill-#{$name}::placeholder,
+  input[type=url].ess.fill-#{$name}::placeholder,
+  input[type=text].ess.fill-#{$name}::placeholder,
+  input[type=date].ess.fill-#{$name}::placeholder,
+  input[type=time].ess.fill-#{$name}::placeholder,
+  input[type=week].ess.fill-#{$name}::placeholder,
+  input[type=email].ess.fill-#{$name}::placeholder,
+  input[type=month].ess.fill-#{$name}::placeholder,
+  input[type=number].ess.fill-#{$name}::placeholder,
+  input[type=search].ess.fill-#{$name}::placeholder,
+  input[type=password].ess.fill-#{$name}::placeholder,
+  input[type=datetime-local].ess.fill-#{$name}::placeholder {
+    color: lighten(color($name), 30%);
+  }
+
+  input[type=tel].ess.border-#{$name},
+  input[type=url].ess.border-#{$name},
+  input[type=text].ess.border-#{$name},
+  input[type=date].ess.border-#{$name},
+  input[type=time].ess.border-#{$name},
+  input[type=week].ess.border-#{$name},
+  input[type=email].ess.border-#{$name},
+  input[type=month].ess.border-#{$name},
+  input[type=number].ess.border-#{$name},
+  input[type=search].ess.border-#{$name},
+  input[type=password].ess.border-#{$name},
+  input[type=datetime-local].ess.border-#{$name} {
+    color: color($name);
+    background: transparent;
+  }
+
+  input[type=tel].ess.border-#{$name}:focus,
+  input[type=url].ess.border-#{$name}:focus,
+  input[type=text].ess.border-#{$name}:focus,
+  input[type=date].ess.border-#{$name}:focus,
+  input[type=time].ess.border-#{$name}:focus,
+  input[type=week].ess.border-#{$name}:focus,
+  input[type=email].ess.border-#{$name}:focus,
+  input[type=month].ess.border-#{$name}:focus,
+  input[type=number].ess.border-#{$name}:focus,
+  input[type=search].ess.border-#{$name}:focus,
+  input[type=password].ess.border-#{$name}:focus,
+  input[type=datetime-local].ess.border-#{$name}:focus {
+    border: 1px solid color($name);
+  }
+}
+
+// input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel],  input[type=url].ess::placeholder {
+//   color: #C8CFDB;
+//   transition: 200ms;
+// }
+
+// input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel],  input[type=url].ess:focus::placeholder {
+//   font-size: 13px;
+//   transition: 200ms;
+// }
+
+// input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel],  input[type=url].ess:disabled {
+//   opacity: .5;
+//   cursor: not-allowed;
+// }
+
+// div.ess.text-input {
+//   position: relative;
+//   margin: 30px 0;
+// }
+
+// label.ess {
+//   position: absolute;
+//   left: 5px;
+//   top: -20px;
+//   font-size: 14px;
+// }
+
+// // bg-border-color
+// @each $name, $hex in $colors {
+//   html input[type=text].ess.bg-border-#{$name} {
+//     color: color($name);
+//   }
+
+
+//   html input[type=text].ess.bg-border-#{$name}:focus {
+//     color: color($name);
+//     background: transparent;
+//     border: solid 1px color($name);
+//   }
+// }
+
+// // bg-flat-color
+// @each $name, $hex in $colors {
+//   html input[type=text].ess.bg-flat-#{$name} {
+//     border: none;
+//     color: color($name);
+//     box-shadow: 0px 0px 16px rgba(#D7D7D7, 0.8);
+//   }
+
+//   html input[type=text].ess.bg-flat-#{$name}:focus {
+//     box-shadow: 0px 4px 24px rgba(#D7D7D7, 0.8);
+//   }
+// }
+
+// // bg-color
+// @each $name, $hex in $colors {
+//   html input[type=text].ess.bg-#{$name} {
+//     border: none;
+//     color: #FFFFFF;
+//   }
+
+//   html input[type=text].ess.bg-#{$name}::placeholder {
+//     color: #DDDDDD;
+//   }
+
+//   html input[type=text].ess.bg-#{$name}:focus {
+//     box-shadow: 0px 0px 16px rgba($hex, 0.6);
+//   }
+// }

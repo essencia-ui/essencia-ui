@@ -1,18 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+  // font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Nunito', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  // font-family: 'Poppins', sans-serif;
 }
 
 @import "./button";
-@import "./colors/colors";
-@import "./shapes";
-@import "./typography";
+@import "./input-text";
+@import "./checkbox";
 
-@import "./forms/input-text";
-@import "./forms/checkbox";
-@import "./forms/radio";
-@import "./forms/switch";
+@import "./colors";
+@import "./borders";
+@import "./shadows";
+
+// @import "./typography";
+// @import "./forms/input-text";
+// @import "./forms/checkbox";
+// @import "./forms/radio";
+// @import "./forms/switch";
+// @import "./card";
+// @import "./nav_header";
+// @import "./avatar";
