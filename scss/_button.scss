@@ -75,7 +75,7 @@ input[type=submit].ess.border {
   input[type=reset].ess.fill-#{$name}.illuminate:hover,
   input[type=button].ess.fill-#{$name}.illuminate:hover,
   input[type=submit].ess.fill-#{$name}.illuminate:hover {
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+    box-shadow: 0px 4px 16px rgba($hex, 0.75);
   }
 
   html button.ess.border-#{$name},

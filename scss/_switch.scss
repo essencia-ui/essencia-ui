@@ -1,12 +1,12 @@
+@import "./mixins/colors";
 @import "./mixins/checkers";
-@import "../colors/mixins/colors-mixin";
 
 .ess.switch {
   margin: 0 10px;
   font-weight: 500;
-  padding-left: 48px;
   user-select: none;
   position: relative;
+  padding-left: 48px;
   display: inline-block;
 }
 
@@ -42,8 +42,6 @@
   0%   {left: 8px; width: 12px;}
   50%   {left: 12px; width: 20px;}
   100%  {left: 22px; width: 12px;}
-  // 100%   {left: 24px;}
-  // 100% {left: 24px;  width: 12px; transform: rotate(-45deg);}
 }
 
 @keyframes uncheck-switch {
@@ -53,24 +51,27 @@
 }
 
 @each $name, $hex in $colors {
-  .ess.switch input[type=checkbox].bg-#{$name} {
+  .ess.switch input[type=checkbox].fill-#{$name} {
     background: transparent;
     border: 2px solid color($name);
   }
 
-  .ess.switch input[type=checkbox].bg-#{$name}:checked {
+  .ess.switch input[type=checkbox].fill-#{$name}:checked {
     background: color($name);
     border: 2px solid color($name);
   }
 
-  .ess.switch input[type=checkbox].bg-#{$name}::after {
+  .ess.switch input[type=checkbox].fill-#{$name}::after {
     background: color($name);
     border: 2px solid color($name);;
   }
 
-  .ess.switch input[type=checkbox].bg-#{$name}:checked::after {
+  .ess.switch input[type=checkbox].fill-#{$name}:checked::after {
     background: #FFFFFF;
     border: 2px solid #FFFFFF;
   }
-
+ 
+  .ess.switch input[type=checkbox].fill-#{$name}.illuminate:checked {
+    box-shadow: 0px 4px 16px rgba(color($name), 0.75);
+  }
 }
