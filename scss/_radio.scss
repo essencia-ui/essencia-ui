@@ -1,5 +1,5 @@
-@import "../mixins/checkers";
-@import "../mixins/colors";
+@import "./mixins/colors";
+@import "./mixins/checkers";
 
 .ess.radio {
   margin: 0 10px;
@@ -51,13 +51,34 @@
 }
 
 @each $name, $hex in $colors {
-  .ess.radio input[type=radio].bg-#{$name} {
+  .ess.radio input[type=radio].fill-#{$name} {
     background: transparent;
     border: 2px solid color($name);
   }
 
-  .ess.radio input[type=radio].bg-#{$name}:checked::after {
+  .ess.radio input[type=radio].fill-#{$name}:checked::after {
     background: color($name);
     border: 2px solid color($name);
+  }
+  
+  .ess.radio input[type=radio].fill-#{$name}.illuminate:checked {
+    box-shadow: 0px 4px 16px rgba(color($name), 0.75);
+  }
+}
+
+@each $gradient in $gradients {
+
+  .ess.radio input[type=radio].fill-#{nth($gradient,1)} {
+    background: transparent;
+    border: 2px solid nth($gradient, 3);
+  }
+
+  .ess.radio input[type=radio].fill-#{nth($gradient,1)}:checked::after {
+    border: 2px solid transparent;
+    background: linear-gradient(111.1deg, nth($gradient, 2) -6.39%, nth($gradient, 3) 102.89%);
+  }
+  
+  .ess.radio input[type=radio].fill-#{nth($gradient,1)}.illuminate:checked {
+    box-shadow: 0px 4px 16px rgba(nth($gradient, 2), 0.75);
   }
 }

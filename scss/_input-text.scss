@@ -135,7 +135,7 @@ input[type=datetime-local].ess.pill {
   input[type=search].ess.fill-#{$name}.illuminate:focus,
   input[type=password].ess.fill-#{$name}.illuminate:focus,
   input[type=datetime-local].ess.fill-#{$name}.illuminate:focus {
-    box-shadow: 0px 0px 16px rgba($hex, 0.6);
+    box-shadow: 0px 4px 16px rgba($hex, 0.75);
   }
 
   input[type=tel].ess.fill-#{$name}::placeholder,
@@ -183,6 +183,57 @@ input[type=datetime-local].ess.pill {
   input[type=datetime-local].ess.border-#{$name}:focus {
     border: 1px solid color($name);
   }
+}
+
+@each $gradient in $gradients {
+
+  input[type=tel].ess.fill-#{nth($gradient,1)},
+  input[type=url].ess.fill-#{nth($gradient,1)},
+  input[type=text].ess.fill-#{nth($gradient,1)},
+  input[type=date].ess.fill-#{nth($gradient,1)},
+  input[type=time].ess.fill-#{nth($gradient,1)},
+  input[type=week].ess.fill-#{nth($gradient,1)},
+  input[type=email].ess.fill-#{nth($gradient,1)},
+  input[type=month].ess.fill-#{nth($gradient,1)},
+  input[type=number].ess.fill-#{nth($gradient,1)},
+  input[type=search].ess.fill-#{nth($gradient,1)},
+  input[type=password].ess.fill-#{nth($gradient,1)},
+  input[type=datetime-local].ess.fill-#{nth($gradient,1)} {
+    border: none;
+    color: #FFFFFF;
+    background: linear-gradient(111.1deg, nth($gradient, 2) -6.39%, nth($gradient, 3) 102.89%);
+  }
+
+  input[type=tel].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=url].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=text].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=date].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=time].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=week].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=email].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=month].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=number].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=search].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=password].ess.fill-#{nth($gradient,1)}::placeholder ,
+  input[type=datetime-local].ess.fill-#{nth($gradient,1)}::placeholder {
+    color: lighten(nth($gradient, 3), 30%);
+  }
+
+  input[type=tel].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=url].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=text].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=date].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=time].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=week].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=email].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=month].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=number].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=search].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=password].ess.fill-#{nth($gradient,1)}.illuminate:focus ,
+  input[type=datetime-local].ess.fill-#{nth($gradient,1)}.illuminate:focus {
+    box-shadow: 0px 4px 16px rgba(nth($gradient, 2), 0.75);
+  }
+
 }
 
 // input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel],  input[type=url].ess::placeholder {

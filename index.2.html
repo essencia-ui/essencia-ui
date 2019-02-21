@@ -60,7 +60,7 @@
         <div class="nome">
           <div class="ess text-input">
             <label class="ess">Nome</label>
-            <input id="input-text1" class="ess rounded border-blue" type="text" placeholder="Digite seu nome" style="width: 100%"/>
+            <input id="input-text1" class="ess rounded border-blue illuminate" type="text" placeholder="Digite seu nome" style="width: 100%"/>
           </div>
         </div>
 
@@ -81,7 +81,7 @@
         <div class="senha">
           <div class="ess text-input">
             <label class="ess" for="input-text">Senha</label>
-            <input id="input-text" class="ess rounded border-blue " type="password" placeholder="Digite sua senha" style="width: 100%" />
+            <input id="input-text" class="ess rounded border-blue illuminate" type="password" placeholder="Digite sua senha" style="width: 100%" />
           </div>
         </div>
 
@@ -96,7 +96,7 @@
           <div class="ess radio">
             <label>
               Conta Livre
-              <input name="radio" class="ess bg-blue light-blue-checked" type="radio" checked />
+              <input name="radio" class="ess fill-blue illuminate" type="radio" checked />
             </label>
           </div>
         </div>
@@ -105,7 +105,7 @@
           <div class="ess radio">
             <label>
               Conta Paga
-              <input name="radio" class="ess bg-blue light-blue-checked" type="radio" />
+              <input name="radio" class="ess fill-blue illuminate" type="radio" />
             </label>
           </div>
         </div>
@@ -119,14 +119,14 @@
 
         <div class="noticias">
           <div class="ess switch">
-            <input id="switch1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
+            <input id="switch1" class="ess fill-blue illuminate" type="checkbox" checked/>
             <label for="switch1">Receber noticias de atualizações. </label>
           </div>
         </div>
         
         <div class="termos">
           <div class="ess checkbox">
-            <input id="checkbox1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
+            <input id="checkbox1" class="ess fill-blue illuminate" type="checkbox" checked/>
             <label for="checkbox1"> Concordo com todos os termos de uso. </label>
           </div>
         </div>
@@ -152,13 +152,14 @@
     display: grid;
     max-width: 600px;
     grid-template-columns: 50% 50%;
-    /* grid-template-rows: repeat(3, 80px) 40px repeat(3, 80px) 60px; */
+    grid-template-rows: repeat(3, 100px) 60px 100px 60px 80px 100px;
     grid-template-areas:  "a b"
                           "c c"
                           "d e"
                           "f g"
                           "h h"
-                          "i j"
+                          "i i"
+                          "j j"
                           "k k"
   }
 

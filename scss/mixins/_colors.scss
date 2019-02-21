@@ -22,20 +22,20 @@ $colors: (
 };
 
 $gradients: (
-  grad-01: (#EC91F7, #F55970),
-  grad-02: (#DDC3FC, #8FC5FC),
-  grad-03: (#02F0FE, #8FC5FC),
-  grad-04: (#677DE7, #754DA5),
-  grad-05: (#2871FA, #6814CC),
-  grad-06: (#C671F3, #F871CE),
-  grad-07: (#FF0846, #FC078A),
-  grad-08: (#5D6BB9, #9827E8),
-  grad-09: (#E7901A, #FE5D53),
-  grad-10: (#8BB45B, #1EA183),
-  grad-11: (#F35C7B, #F76E65),
-  grad-12: (#F58320, #FE5A85),
+  ("grad-01", #EC91F7, #F55970),
+  ("grad-02", #DDC3FC, #8FC5FC),
+  ("grad-03", #02F0FE, #8FC5FC),
+  ("grad-04", #677DE7, #754DA5),
+  ("grad-05", #2871FA, #6814CC),
+  ("grad-06", #C671F3, #F871CE),
+  ("grad-07", #FF0846, #FC078A),
+  ("grad-08", #5D6BB9, #9827E8),
+  ("grad-09", #E7901A, #FE5D53),
+  ("grad-10", #8BB45B, #1EA183),
+  ("grad-11", #F35C7B, #F76E65),
+  ("grad-12", #F58320, #FE5A85),
 );
 
-@function gradient($name) {
-  @return map-get($gradients, $name)
-};
+// @function gradient($name) {
+//   @return map-get($gradients, $name)
+// };
