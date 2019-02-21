@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- <html lang="en" style="background: #F2F3F8"> -->
-<html lang="en" style="background: ">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -33,7 +33,7 @@
     <section class="right-section">
       <div class="item">
         <div class="ess text-input">
-          <input id="input-text" class="ess bg-border-blue pill " type="text" placeholder="Search..." />
+          <input id="input-text" class="ess border-blue pill " type="text" placeholder="Search..." />
         </div>
       </div>
       <div class="item">
@@ -46,7 +46,7 @@
   </header>
 
   <section style="padding: 10% 25%">
-    <div class="ess card rounded border">
+    <div class="ess card rounded border" >
 
       <div class="header">
         <span class="title"> Perfil </span>
@@ -55,49 +55,44 @@
 
       <div class="separator"></div>
 
-      <div class="body" style="display: flex; flex-wrap: wrap; padding: 4% 20%; justify-content: center;">
+      <div class="body grid-container">
 
-        <div style="width: 50%;">
+        <div class="nome">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue" type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
-            <label class="ess" for="input-text">Nome</label>
+            <label class="ess">Nome</label>
+            <input id="input-text1" class="ess rounded border-blue" type="text" placeholder="Digite seu nome" style="width: 100%"/>
           </div>
         </div>
 
-        <div style="width: 50%;">
+        <div class="sobrenome">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue " type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
-            <label class="ess" for="input-text">Sobrenome</label>
+            <label class="ess">Sobrenome</label>
+            <input id="input-text2" class="ess rounded border-blue" type="text" placeholder="Digite seu sobrenome" style="width: 100%"/>
           </div>
         </div>
 
-        <div style="width: 100%;">
+        <div class="email">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue " type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
-            <label class="ess" for="input-text">Email</label>
+            <label class="ess">Email</label>
+            <input id="input-text3" class="ess rounded border-blue" type="email" placeholder="Digite seu exemplo@email.com" style="width: 100%"/>
           </div>
         </div>
 
-        <div style="width: 50%">
+        <div class="senha">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue " type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
             <label class="ess" for="input-text">Senha</label>
+            <input id="input-text" class="ess rounded border-blue " type="password" placeholder="Digite sua senha" style="width: 100%" />
           </div>
         </div>
 
-        <div style="width: 50%;">
+        <div class="confirma">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue " type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
             <label class="ess" for="input-text">Confirmar Senha</label>
+            <input id="input-text" class="ess rounded border-blue " type="password" placeholder="Confirme a sua senha" style="width: 100%" />
           </div>
         </div>
 
-        <div style="width: 50%;">
+        <div class="livre">
           <div class="ess radio">
             <label>
               Conta Livre
@@ -106,7 +101,7 @@
           </div>
         </div>
 
-        <div style="width: 50%;">
+        <div class="paga">
           <div class="ess radio">
             <label>
               Conta Paga
@@ -115,36 +110,30 @@
           </div>
         </div>
 
-        <div style="width: 100%; margin-top: 20px">
+        <div class="cargo">
           <div class="ess text-input">
-            <input id="input-text" class="ess rounded-s6 bg-border-blue " type="text" placeholder="Digite seu nome"
-              style="width: 100%" />
             <label class="ess" for="input-text">Cargo</label>
+            <input id="input-text" class="ess rounded border-blue " type="text" placeholder="Digite seu nome" style="width: 100%" />
           </div>
         </div>
 
-        <div style="width: 100%;">
+        <div class="noticias">
           <div class="ess switch">
-            <label for="switch1"> 
-              Receber noticias de atualizações futuras. 
-              <input id="switch1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
-            </label>
+            <input id="switch1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
+            <label for="switch1">Receber noticias de atualizações. </label>
           </div>
         </div>
         
-        <div style="width: 100%; margin-top: 20px">
+        <div class="termos">
           <div class="ess checkbox">
-            <label for="checkbox1"> 
-              Concordo com todos os termos de uso. 
-              <input id="checkbox1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
-            </label>
+            <input id="checkbox1" class="ess bg-blue light-blue-checked" type="checkbox" checked/>
+            <label for="checkbox1"> Concordo com todos os termos de uso. </label>
           </div>
         </div>
 
-      </div>
-
-      <div class="footer" style="display: flex; flex-wrap: wrap; padding: 4% 20%;">
-        <button class="ess rounded-s6 bg-turquoise light-turquoise-hover"> Criar usuário </button>
+        <div class="footer" >
+          <button class="ess rounded fill-blue illuminate" style="font-weight: 400; font-size: 14px;"> Criar usuário </button>
+        </div>
       </div>
 
     </div>
@@ -154,4 +143,79 @@
 
 </body>
 
+<style>
+  label.ess {
+    display: inline-block;
+    margin: 15px 0 3px;
+  }
+  .grid-container {
+    display: grid;
+    max-width: 600px;
+    grid-template-columns: 50% 50%;
+    /* grid-template-rows: repeat(3, 80px) 40px repeat(3, 80px) 60px; */
+    grid-template-areas:  "a b"
+                          "c c"
+                          "d e"
+                          "f g"
+                          "h h"
+                          "i j"
+                          "k k"
+  }
+
+  .nome {
+    padding: 5px;
+    grid-area: a;
+  }
+
+  .sobrenome {
+    padding: 5px;
+    grid-area: b;
+  }
+
+  .email {
+    padding: 5px;
+    grid-area: c;
+  }
+
+  .senha {
+    padding: 5px;
+    grid-area: d;
+  }
+
+  .confirma {
+    padding: 5px;
+    grid-area: e;
+  }
+  .livre {
+    padding: 5px;
+    margin: 5px 0 0;
+    grid-area: f;
+  }
+
+  .paga {
+    padding: 5px;
+    margin: 5px 0 0;
+    grid-area: g;
+  }
+  .cargo {
+    padding: 5px;
+    grid-area: h;
+  }
+
+  .noticias {
+    padding: 5px;
+    margin: 10px 0 0;
+    grid-area: i;
+  }
+  .termos {
+    padding: 5px;
+    margin: 10px 0 0;
+    grid-area: j;
+  }
+
+  .footer {
+    margin: 10px auto 0;
+    grid-area: k;
+  }
+</style>
 </html>
