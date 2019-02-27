@@ -1,0 +1,55 @@
+@import "./mixins/colors";
+
+.popover {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 15px 1px #e5e5e5;
+  margin: 5px; 
+
+}
+.popover ul{
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.popover ul li:hover {
+  background: #0084F8 
+}
+// .popover::after {
+//    content: '';
+//    width: 12px;
+//    height: 12px;
+//    box-shadow: -3px -3px 16px 0px #e5e5e5;
+//    background: #fff;
+//    display: block;
+//    position: absolute;
+//    top: -6px;
+//    right: 30px;
+//    transform: rotate(45deg);
+// }
+.popover ul li a {
+  display: inline-block;
+  padding: 8px 48px; 
+  text-decoration: none;
+  color: #9c9c9c;
+}
+.popover ul li:hover a{
+  color: #fff; 
+}
+
+@each $name, $hex in $colors {
+
+  .ess.popover.fill-#{$name} ul li:hover{
+    background: color($name);
+  }
+
+  .ess.popover.fill-#{$name}.illuminate ul li:hover{
+    box-shadow: 0px 0px 10px rgba($hex, 0.75);
+  }
+
+  // .ess.popover.fill-#{$name}.illuminate::after {
+  //   box-shadow: -3px -3px 16px rgba($hex, 0.1);
+  // }
+}

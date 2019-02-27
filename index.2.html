@@ -18,49 +18,53 @@
 
     <section class="left-section">
       <div class="item">
-        <span class="title"> Essencia UI </span>
+        <h2 class="title"> Essencia UI </h2>
       </div>
-
-      <div class="item">
-        <a href="#"> Dashboard </a>
-      </div>
-
-      <div class="item">
-        <a href="#"> Invoices </a>
-      </div>
+      <nav class="item">
+        <ul>
+          <li class="item">
+            <a href="#"> Dashboard </a>
+          </li>
+          <li class="item">
+            <a href="#"> Invoices </a>
+          </li>
+          <li></li>
+        </ul>
+      </nav>
     </section>
 
     <section class="right-section">
-      <div class="item">
+      <div>
+        <img class="ess avatar pill" src="https://semantic-ui.com/images/avatar2/large/matthew.png" alt="">
+        <span id="popover" style="padding: 16px; font-weight: normal; line-height: normal; font-size: 14px; color: #444444">
+          Bruno Santos
+        </span>
+      </div>
+      <!-- <div>
         <div class="ess text-input">
           <input id="input-text" class="ess border-blue pill " type="text" placeholder="Search..." />
         </div>
-      </div>
-      <div class="item">
-        <img class="ess avatar pill" src="https://semantic-ui.com/images/avatar2/large/matthew.png" alt="">
-        <span style="padding: 16px; font-weight: normal; line-height: normal; font-size: 14px; color: #444444"> Bruno
-          Santos </span>
-      </div>
+      </div> -->
     </section>
 
   </header>
 
-  <section style="padding: 10% 25%">
+  <section style="padding-top: 150px; width: 600px; margin: 0 auto;">
     <div class="ess card rounded border" >
 
-      <div class="header">
+      <!-- <div class="header">
         <span class="title"> Perfil </span>
         <span class="subtitle"> Atualize as informações do perfil do seu usuário. </span>
-      </div>
+      </div> -->
 
-      <div class="separator"></div>
+      <!-- <div class="separator"></div> -->
 
       <div class="body grid-container">
 
         <div class="nome">
           <div class="ess text-input">
             <label class="ess">Nome</label>
-            <input id="input-text1" class="ess rounded border-blue illuminate" type="text" placeholder="Digite seu nome" style="width: 100%"/>
+            <input id="input-text1" class="ess rounded border-blue " type="text" placeholder="Digite seu nome" style="width: 100%"/>
           </div>
         </div>
 
@@ -81,14 +85,14 @@
         <div class="senha">
           <div class="ess text-input">
             <label class="ess" for="input-text">Senha</label>
-            <input id="input-text" class="ess rounded border-blue illuminate" type="password" placeholder="Digite sua senha" style="width: 100%" />
+            <input id="input-text4" class="ess rounded border-blue " type="password" placeholder="Digite sua senha" style="width: 100%" />
           </div>
         </div>
 
         <div class="confirma">
           <div class="ess text-input">
             <label class="ess" for="input-text">Confirmar Senha</label>
-            <input id="input-text" class="ess rounded border-blue " type="password" placeholder="Confirme a sua senha" style="width: 100%" />
+            <input id="input-text5" class="ess rounded border-blue " type="password" placeholder="Confirme a sua senha" style="width: 100%" />
           </div>
         </div>
 
@@ -96,7 +100,7 @@
           <div class="ess radio">
             <label>
               Conta Livre
-              <input name="radio" class="ess fill-blue illuminate" type="radio" checked />
+              <input name="radio" class="ess fill-blue " type="radio" checked />
             </label>
           </div>
         </div>
@@ -105,7 +109,7 @@
           <div class="ess radio">
             <label>
               Conta Paga
-              <input name="radio" class="ess fill-blue illuminate" type="radio" />
+              <input name="radio" class="ess fill-blue " type="radio" />
             </label>
           </div>
         </div>
@@ -113,26 +117,26 @@
         <div class="cargo">
           <div class="ess text-input">
             <label class="ess" for="input-text">Cargo</label>
-            <input id="input-text" class="ess rounded border-blue " type="text" placeholder="Digite seu nome" style="width: 100%" />
+            <input id="input-text6" class="ess rounded border-blue " type="text" placeholder="Digite seu nome" style="width: 100%" />
           </div>
         </div>
 
         <div class="noticias">
           <div class="ess switch">
-            <input id="switch1" class="ess fill-blue illuminate" type="checkbox" checked/>
+            <input id="switch1" class="ess fill-grad-12 illuminate " type="checkbox" checked/>
             <label for="switch1">Receber noticias de atualizações. </label>
           </div>
         </div>
         
         <div class="termos">
           <div class="ess checkbox">
-            <input id="checkbox1" class="ess fill-blue illuminate" type="checkbox" checked/>
+            <input id="checkbox1" class="ess fill-grad-12 illuminate" type="checkbox" checked/>
             <label for="checkbox1"> Concordo com todos os termos de uso. </label>
           </div>
         </div>
 
         <div class="footer" >
-          <button class="ess rounded fill-blue illuminate" style="font-weight: 400; font-size: 14px;"> Criar usuário </button>
+          <button class="ess rounded fill-blue " style="font-weight: 400; font-size: 14px;"> Criar usuário </button>
         </div>
       </div>
 
@@ -141,9 +145,41 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+  <div class="ess popover fill-turquoise illuminate">
+    <ul>
+      <li>
+        <a href="#" id="fff"> Profile </a>
+      </li>
+      <li>
+        <a href=""> Config </a>
+      </li>
+      <li>
+        <a href=""> Logout </a>
+      </li>
+    </ul>
+  </div>
 </body>
 
+<script type = "module">
+  import Popper from './node_modules/popper.js/dist/popper.js';
+  let referenceObject = document.querySelector('#popover');
+  let popperNode = document.querySelector('.popover');
+  let pp = null;
+  let lll = document.querySelector('#fff');
+
+  referenceObject.addEventListener('click', () => {
+    if(pp == null) {
+      pp = new Popper(referenceObject, popperNode);
+    } else {
+      pp.destroy();
+      pp = null;
+    }
+  })
+
+</script>
+
 <style>
+
   label.ess {
     display: inline-block;
     margin: 15px 0 3px;
