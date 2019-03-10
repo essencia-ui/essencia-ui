@@ -4,9 +4,14 @@
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 0 15px 1px #e5e5e5;
-  margin: 5px; 
-
+  margin: 5px;
+  visibility: hidden;
 }
+
+.popover.active {
+  visibility: visible;
+}
+
 .popover ul{
   list-style: none;
   padding: 0;

@@ -1,0 +1,41 @@
+.ess.select-wrapper {
+  position: relative;
+}
+.ess.select ~ div {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 2px solid color(blue);
+  cursor: pointer;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.ess.select ~ input {
+  cursor: pointer;
+}
+.select.ess ~ ul{
+  z-index: 999;
+  position: absolute;
+  background: #ffffff;
+  width: 100%;
+  display: none;
+  list-style: none;
+  padding: 15px 0;
+  border-radius: 6px;
+  color: color(blue);
+  box-shadow: 0 0 16px 0px #C8CFDB;
+}
+
+.select.ess ~ ul > li{
+  padding: 5px 20px;
+}
+
+.select.ess ~ ul > li:hover{
+  color: #fff;
+  background: color(blue);
+}

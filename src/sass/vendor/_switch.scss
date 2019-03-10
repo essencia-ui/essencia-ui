@@ -76,30 +76,3 @@
     box-shadow: 0px 4px 16px rgba(color($name), 0.75);
   }
 }
-
-@each $gradient in $gradients {
-
-  .ess.switch input[type=checkbox].fill-#{nth($gradient,1)} {
-    background: transparent;
-    border: 2px solid nth($gradient, 3);
-  }
-
-  .ess.switch input[type=checkbox].fill-#{nth($gradient,1)}:checked {
-    border: 2px solid darken(nth($gradient,2), 1%);
-    background: linear-gradient(111.1deg, nth($gradient, 2) -6.39%, nth($gradient, 3) 102.89%);
-  }
-
-  .ess.switch input[type=checkbox].fill-#{nth($gradient,1)}::after {
-    border: 2px solid nth($gradient, 3);
-    background: nth($gradient, 3);
-  }
-
-  .ess.switch input[type=checkbox].fill-#{nth($gradient,1)}:checked::after {
-    background: #FFFFFF;
-    border: 2px solid #FFFFFF;
-  }
- 
-  .ess.switch input[type=checkbox].fill-#{nth($gradient,1)}.illuminate:checked {
-    box-shadow: 0px 4px 16px rgba(nth($gradient, 2), 0.75);
-  }
-}

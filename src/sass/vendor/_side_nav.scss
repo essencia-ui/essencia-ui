@@ -1,0 +1,94 @@
+@import "./mixins/colors";
+
+nav.ess.side-nav {
+  background-color: color(white);
+  width: 240px;
+  position: fixed;
+  height: 100%;
+  box-shadow: 1px 4px 16px 0px color(light-grey);
+  list-style: none;
+}
+
+nav.ess.side-nav ul {
+  padding: 0;
+}
+
+nav.ess.side-nav ul li {
+  position: relative;
+  text-align: left;
+  margin: 2px 0;
+}
+
+nav.ess.side-nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 10px 25px;
+  color: color(full-black);
+}
+
+nav.ess.side-nav ul li.header-menu {
+  padding: 10px 0 15px 25px;
+  font-size: 14px;
+  color: #444444;
+}
+
+nav.ess.side-nav ul li.header-menu div{
+  margin-bottom: 20px;
+}
+
+nav.ess.side-nav ul li.header-menu::after {
+  content: '';
+  display: block!important;
+  position: relative;
+  bottom: 0;
+  left: -10px;
+  width: 220px;
+  height: 1px;
+  margin-top: 20px; 
+  background: #cccccc!important;
+  box-shadow: none!important;
+}
+
+nav.ess.side-nav ul li.header-menu .background{
+  background: #444444;
+}
+
+nav.ess.side-nav ul li.header-menu a{
+  padding: 5px 0 0;
+}
+
+nav.ess.side-nav ul li.active::after {
+  content: '';
+  display: block;
+  background: color(blue);
+  position: absolute;
+  top : calc(50% - 15px);
+  right: 0;
+  width: 3px;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+nav.ess.side-nav ul li a:hover {
+  background: #f6f6f6;
+}
+
+@each $name, $hex in $colors {
+  nav.ess.side-nav.fill-#{$name} ul li.active a{
+    color: color($name);
+  }
+
+  // nav.ess.side-nav.fill-#{$name} ul li:hover{
+  //   color: color($name);
+  // }
+
+  nav.ess.side-nav.fill-#{$name} ul li::after {
+    background: color($name);
+  }
+  
+  nav.ess.side-nav.fill-#{$name}.illuminate ul li::after {
+    box-shadow: -2px 0px 16px rgba(color($name), 0.75);
+  }
+}

@@ -1,0 +1,19 @@
+@import "./mixins/colors";
+
+$dark-border-color: #000000;
+$light-border-color: #C8CFDB;
+
+$corners: (
+  c3: 3px,
+  c6: 6px,
+  c9: 9px,
+  c12: 12px,
+  pill: 9999px,
+);
+
+// round corners
+@each $corner, $size in $corners {
+  html .ess.rounded-#{$corner} {
+    border-radius: map-get($corners, $corner);
+  }
+}

@@ -1,0 +1,25 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+}
+
+@import "./button";
+@import "./input-text";
+@import "./checkbox";
+@import "./select";
+@import "./radio";
+@import "./switch";
+
+@import "./borders";
+
+@import "./typography";
+// @import "./input-text";
+// @import "./checkbox";
+// @import "./forms/switch";
+// @import "./card";
+@import "./popover";
+@import "./nav_header";
+@import "./side_nav";
+@import "./avatar";
