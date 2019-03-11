@@ -1,6 +1,7 @@
 var
 	gulp = require( 'gulp' ),
 	browserSync = require( 'browser-sync' ),
+	sourcemaps = require( 'gulp-sourcemaps'),
 	$ = require( 'gulp-load-plugins' )( {lazy: true} );
 
 gulp.task( 'styles', function () {
@@ -9,25 +10,36 @@ gulp.task( 'styles', function () {
 		.pipe( $.sass().on( 'error', $.sass.logError ) )
 		.pipe( $.autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
 		.pipe( $.cleanCss() )
-		.pipe( gulp.dest( 'public/css' ) )
+		.pipe( sourcemaps.init())
+		.pipe( $.rename( 'essencia-ui.min.css' ) )
+		.pipe( sourcemaps.write('.'))
+		.pipe( gulp.dest( 'public/css/' ) )
 		.pipe( browserSync.reload( {stream: true} ) );
 } );
 
-gulp.task('vendorScripts', function() {
-	gulp.src('./src/js/vendor/**/*.js')
-			.pipe(gulp.dest('public/js/vendor'));
-});
+// gulp.task('vendorScripts', function() {
+// 	gulp.src('./src/js/vendor/**/*.js')
+// 			.pipe(gulp.dest('public/js/vendor'));
+// });
 
 gulp.task( 'scripts', function () {
 	return gulp
-		.src( [
-			'./src/js/!(vendor)**/!(app)*.js',
+		.src([
+			'./src/js/vendor/**/*.js',
 			'./src/js/app.js'
-		] )
+		])
+		// .src( [
+		// 	'./src/js/!(vendor)**/!(app)*.js',
+		// 	'./src/js/app.js'
+		// ] )
 		.pipe( $.plumber() )
-		.pipe( $.babel() )
-		.pipe( $.concat( 'app.js' ) )
-		.pipe( $.uglify() )
+		.pipe( sourcemaps.init())
+		.pipe( $.babel({
+			presets: ['@babel/preset-env'],
+		}))
+		.pipe( $.concat( 'essencia-ui.min.js' ) )
+		.pipe( $.terser() )
+		.pipe( sourcemaps.write('.'))
 		.pipe( gulp.dest( 'public/js' ) )
 		.pipe( browserSync.reload( {stream: true} ) );
 } );
@@ -77,7 +89,8 @@ gulp.task( 'watch', function () {
 	// Watch .js files
 	gulp.watch( 'src/js/*.js', ['scripts', browserSync.reload] );
 	// Watch .js files
-	gulp.watch( 'src/js/vendor/*', ['vendorScripts', browserSync.reload] );
+	// gulp.watch( 'src/js/vendor/*', ['vendorScripts', browserSync.reload] );
+	gulp.watch( 'src/js/vendor/*', ['scripts', browserSync.reload] );
 	// Watch image files
 	gulp.watch( 'src/images/**/*', ['images', browserSync.reload] );
 } );
@@ -85,7 +98,7 @@ gulp.task( 'watch', function () {
 gulp.task( 'default', function () {
 	gulp.start(
 		'styles',
-		'vendorScripts',
+		// 'vendorScripts',
 		'scripts',
 		'images',
 		'html',

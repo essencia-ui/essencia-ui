@@ -1,0 +1,11 @@
+{
+  // "plugins": [
+  //   ["transform-builtin-extend", {
+  //     "globals": ["Error"],
+  //     "approximate": true
+  //   }]
+  // ],
+  // "presets": [
+  //   ["env", { "modules": "commonjs" }]
+  // ]
+}

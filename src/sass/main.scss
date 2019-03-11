@@ -5,21 +5,21 @@
 
 }
 
-@import "./button";
-@import "./input-text";
-@import "./checkbox";
-@import "./select";
-@import "./radio";
-@import "./switch";
+@import "./vendor/button";
+@import "./vendor/input-text";
+@import "./vendor/checkbox";
+@import "./vendor/select";
+@import "./vendor/radio";
+@import "./vendor/switch";
 
-@import "./borders";
+@import "./vendor/borders";
 
-@import "./typography";
-// @import "./input-text";
-// @import "./checkbox";
-// @import "./forms/switch";
-// @import "./card";
-@import "./popover";
-@import "./nav_header";
-@import "./side_nav";
-@import "./avatar";
+@import "./vendor/typography";
+// @import "./vendor/input-text";
+// @import "./vendor/checkbox";
+// @import "./vendor/forms/switch";
+// @import "./vendor/card";
+@import "./vendor/popover";
+@import "./vendor/nav_header";
+@import "./vendor/side_nav";
+@import "./vendor/avatar";

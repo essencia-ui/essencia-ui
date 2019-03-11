@@ -1,34 +1,40 @@
 {
-  "name": "Gulp-Starter",
+  "name": "essencia-ui",
   "version": "0.0.1",
   "description": "",
   "main": "gulpfile.js",
-  "author": "Shramee Srivastav",
+  "author": "Bruno Santos <bruno.dos1997@gmail.com>",
+  "contributors": [
+    "Carlos Henrique Escouto <carloshenriqueescouto@gmail.com>"
+  ],
   "license": "MIT",
-  "homepage": "http://shramee.me",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shramee/gulp-sass-babel.git"
+    "url": "git://github.com/essencia-ui/essencia-ui"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.7.5",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-babel": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-changed": "^3.1.0",
-    "gulp-clean-css": "^3.3.1",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.5.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^4.1.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "gulp-size": "^3.0.0",
-    "gulp-uglify": "^3.0.0",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-terser": "^1.1.7"
+  },
+  "dependencies": {
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
     "popper.js": "^1.14.7"
   }
 }

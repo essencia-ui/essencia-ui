@@ -1,12 +1,18 @@
-export default select = () => {
+const Select = () => {
   let selects = $(".ess.select");
   $.each(selects, (index, select) => {
     let options = $(select).children();
 
     let ul = $('<ul>', {class: 'ess select-options', 'data-id': `${select.id}${(index + 13) * 25}`});
     let input = $('<input>', {class: 'ess rounded border-blue', type: 'text', style: 'width: 100%', id: ul.attr('data-id') })
-    input.on('focus', () => {ul.css('display', 'block')})
-    input.on('blur', () => {closeInput(ul)})
+    input.on('focus', () => {
+      ul.css('display', 'block');
+      $(select).addClass('active');
+    })
+    input.on('blur', () => {
+      closeInput(ul);
+      $(select).removeClass('active');
+    })
 
     for (let i = 0; i < options.length; i ++) {
       let li = $('<li>', {'data-value': options[i].value, id: `${ul.attr('data-id')}-${options[i].value}-${options[i].text}`});
@@ -29,10 +35,10 @@ export default select = () => {
   }
 
   function closeInput(ul) {
-    
     setTimeout(() => {
-      console.log(ul)
       $(ul).css('display', 'none');
     }, 200)
   }
-}
+};
+
+// export default Select;

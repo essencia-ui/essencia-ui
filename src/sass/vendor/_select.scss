@@ -1,3 +1,11 @@
+.ess.select {
+  display: none;
+}
+
+.ess.select option {
+  display: none;
+}
+
 .ess.select-wrapper {
   position: relative;
 }
@@ -10,8 +18,16 @@
   border-left-color: transparent;
   border-top-color: transparent;
   transform: rotate(45deg);
+  transition: .300s;
   position: absolute;
   top: 15px;
+  right: 10px;
+}
+
+.ess.select.active ~ div {
+  transform: rotate(-45deg) rotateX(180deg);
+  transition: .300s;
+  top: 20px;
   right: 10px;
 }
 
