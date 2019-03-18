@@ -1,8 +1,6 @@
 // import Popper from 'popper.js'
 
-const PopperJs = (referenceObject, popperNode) => {
-  // let referenceObject = document.querySelector('#popover');
-  // let popperNode = document.querySelector('.popover');
+const PopUp = (referenceObject, popperNode) => {
   let status = null;
 
   referenceObject.addEventListener('click', function(e) {
