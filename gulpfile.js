@@ -103,6 +103,8 @@ gulp.task( 'default', function () {
 		'images',
 		'html',
 		'browser-sync',
-		'watch'
+		'watch',
 	);
 } );
+
+

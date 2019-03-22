@@ -1,5 +1,6 @@
 @import "./mixins/colors";
 
+.ess.button,
 button.ess,
 submit.ess,
 input[type=reset].ess,
@@ -11,6 +12,7 @@ input[type=submit].ess {
   font-size: 12px;
   font-weight: 700;
   overflow: visible;
+  user-select: none;
   padding: 12px 42px;
   line-height: normal;
   text-align: justify;
@@ -22,6 +24,25 @@ input[type=submit].ess {
   -moz-osx-font-smoothing: inherit;
 }
 
+button.ess:disabled,
+submit.ess:disabled,
+input[type=reset].ess:disabled,
+input[type=button].ess:disabled,
+input[type=submit].ess:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ess.button.square,
+button.ess.square,
+submit.ess.square,
+input[type=reset].ess.square,
+input[type=button].ess.square,
+input[type=submit].ess.square {
+  border-radius: 0px;
+}
+
+.ess.button.rounded,
 button.ess.rounded,
 submit.ess.rounded,
 input[type=reset].ess.rounded,
@@ -30,6 +51,7 @@ input[type=submit].ess.rounded {
   border-radius: 6px;
 }
 
+.ess.button.pill,
 button.ess.pill,
 submit.ess.pill,
 input[type=reset].ess.pill,
@@ -38,16 +60,18 @@ input[type=submit].ess.pill {
   border-radius: 9999px;
 }
 
-button.ess.fill,
-submit.ess.fill,
-input[type=reset].ess.fill,
-input[type=button].ess.fill,
-input[type=submit].ess.fill {
+.ess.button.filled,
+button.ess.filled,
+submit.ess.filled,
+input[type=reset].ess.filled,
+input[type=button].ess.filled,
+input[type=submit].ess.filled {
   border: none;
   color: #000000;
   background: #DDDDDD;
 }
 
+.ess.button.border,
 button.ess.border,
 submit.ess.border,
 input[type=reset].ess.border,
@@ -58,33 +82,116 @@ input[type=submit].ess.border {
   border: 1px solid #C8CFDB;
 }
 
+.ess.button.clean,
+button.ess.clean,
+submit.ess.clean,
+input[type=reset].ess.clean,
+input[type=button].ess.clean,
+input[type=submit].ess.clean {
+  color: #000000;
+  background: transparent;
+  border: none;
+}
+
+.ess.button.clean:hover,
+button.ess.clean:hover,
+submit.ess.clean:hover,
+input[type=reset].ess.clean:hover,
+input[type=button].ess.clean:hover,
+input[type=submit].ess.clean:hover {
+  background: rgba(0, 0, 0, 0.10);
+}
+
+.ess.button.small,
+button.ess.small,
+submit.ess.small,
+input[type=reset].ess.small,
+input[type=button].ess.small,
+input[type=submit].ess.small {
+  font-size: 10px;
+  padding: 10px 40px;
+}
+
+.ess.button.medium,
+button.ess.medium,
+submit.ess.medium,
+input[type=reset].ess.medium,
+input[type=button].ess.medium,
+input[type=submit].ess.medium {
+  font-size: 12px;
+  padding: 12px 42px;
+}
+
+.ess.button.big,
+button.ess.big,
+submit.ess.big,
+input[type=reset].ess.big,
+input[type=button].ess.big,
+input[type=submit].ess.big {
+  font-size: 14px;
+  padding: 14px 44px;
+}
+
+.ess.button.shadow:hover,
+button.ess.shadow:hover,
+submit.ess.shadow:hover,
+input[type=reset].ess.shadow:hover,
+input[type=button].ess.shadow:hover,
+input[type=submit].ess.shadow:hover {
+  box-shadow: 0px 4px 16px rgba(#C8CFDB, 0.75), 0px 0px 2px #C8CFDB;
+}
+
 @each $name, $hex in $colors {
 
-  button.ess.fill-#{$name},
-  submit.ess.fill-#{$name},
-  input[type=reset].ess.fill-#{$name},
-  input[type=button].ess.fill-#{$name},
-  input[type=submit].ess.fill-#{$name} {
+  .ess.button.#{$name},
+  button.ess.#{$name},
+  submit.ess.#{$name},
+  input[type=reset].ess.#{$name},
+  input[type=button].ess.#{$name},
+  input[type=submit].ess.#{$name} {
     border: none;
     color: #FFFFFF;
     background: color($name);
   }
 
-  button.ess.fill-#{$name}.illuminate:hover,
-  submit.ess.fill-#{$name}.illuminate:hover,
-  input[type=reset].ess.fill-#{$name}.illuminate:hover,
-  input[type=button].ess.fill-#{$name}.illuminate:hover,
-  input[type=submit].ess.fill-#{$name}.illuminate:hover {
-    box-shadow: 0px 4px 16px rgba($hex, 0.75);
-  }
-
-  html button.ess.border-#{$name},
-  html submit.ess.border-#{$name},
-  html input[type=reset].ess.border-#{$name},
-  html input[type=button].ess.border-#{$name},
-  html input[type=submit].ess.border-#{$name} {
+  .ess.button.border.#{$name},
+  button.ess.border.#{$name},
+  submit.ess.border.#{$name},
+  input[type=reset].ess.border.#{$name},
+  input[type=button].ess.border.#{$name},
+  input[type=submit].ess.border.#{$name} {
     color: color($name);
     background: transparent;
     border: 1px solid color($name);
+  }
+  
+  .ess.button.clean.#{$name},
+  button.ess.clean.#{$name},
+  submit.ess.clean.#{$name},
+  input[type=reset].ess.clean.#{$name},
+  input[type=button].ess.clean.#{$name},
+  input[type=submit].ess.clean.#{$name} {
+    color: color($name);
+    background: transparent;
+    border: none;
+  }
+
+  .ess.button.clean.#{$name}:hover,
+  button.ess.clean.#{$name}:hover,
+  submit.ess.clean.#{$name}:hover,
+  input[type=reset].ess.clean.#{$name}:hover,
+  input[type=button].ess.clean.#{$name}:hover,
+  input[type=submit].ess.clean.#{$name}:hover {
+    color: color($name);
+    background: rgba(color($name), 0.2);
+  }
+
+  .ess.button.#{$name}.illuminate:hover,
+  button.ess.#{$name}.illuminate:hover,
+  submit.ess.#{$name}.illuminate:hover,
+  input[type=reset].ess.#{$name}.illuminate:hover,
+  input[type=button].ess.#{$name}.illuminate:hover,
+  input[type=submit].ess.#{$name}.illuminate:hover {
+    box-shadow: 0px 4px 16px rgba($hex, 0.75);
   }
 }

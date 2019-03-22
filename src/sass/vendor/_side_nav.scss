@@ -1,12 +1,45 @@
 @import "./mixins/colors";
 
+$sideNav: (
+  dark-border-color: #000000,
+  dark-shadow-color: #000000,
+  dark-background-color: #383838,
+  dark-list-item-color: #7e7e7e,
+  dark-list-selection-color: #000000,
+
+  light-border-color: #C8CFDB,
+  light-shadow-color: #C8CFDB,
+  light-background-color: #FFFFFF,
+  light-list-item-color: #444444,
+  light-list-selection-color: #EEEEEE,
+);
+
 nav.ess.side-nav {
-  background-color: color(white);
   width: 240px;
-  position: fixed;
   height: 100%;
-  box-shadow: 1px 4px 16px 0px color(light-grey);
+  position: fixed;
   list-style: none;
+  background: map-get($sideNav, light-background-color);
+}
+
+nav.ess.side-nav.dark {
+  background: map-get($sideNav, dark-background-color);
+}
+
+nav.ess.side-nav.border {
+  border-right: 1px solid rgba(map-get($sideNav, light-border-color), 0.6);
+}
+
+nav.ess.side-nav.dark.border {
+  border-right: 1px solid rgba(map-get($sideNav, dark-border-color), 0.2);
+}
+
+nav.ess.side-nav.shadow {
+  box-shadow: 0px 0px 16px rgba(map-get($sideNav, light-shadow-color), 0.75);
+}
+
+nav.ess.side-nav.dark.shadow {
+  box-shadow: 0px 0px 16px rgba(map-get($sideNav, dark-shadow-color), 0.25);
 }
 
 nav.ess.side-nav ul {
@@ -14,75 +47,82 @@ nav.ess.side-nav ul {
 }
 
 nav.ess.side-nav ul li {
-  position: relative;
-  text-align: left;
   margin: 2px 0;
+  text-align: left;
+  position: relative;
 }
 
 nav.ess.side-nav ul li a {
+  width: 100%;
   text-decoration: none;
   display: inline-block;
-  width: 100%;
   padding: 10px 0 10px 25px;
-  color: color(full-black);
+  transition: all 300ms ease-in-out;
+  color: map-get($sideNav, light-list-item-color);
 }
 
-nav.ess.side-nav ul li.header-menu {
-  padding: 10px 0 15px 25px;
-  font-size: 14px;
-  color: #444444;
-}
-
-nav.ess.side-nav ul li.header-menu div{
-  margin-bottom: 20px;
-}
-
-nav.ess.side-nav ul li.header-menu::after {
-  content: '';
-  display: block!important;
-  position: relative;
-  bottom: 0;
-  left: -10px;
-  width: 220px;
-  height: 1px;
-  margin-top: 20px; 
-  background: #cccccc!important;
-  box-shadow: none!important;
-}
-
-nav.ess.side-nav ul li.header-menu .background{
-  background: #444444;
-}
-
-nav.ess.side-nav ul li.header-menu a{
-  padding: 5px 0 0;
-}
-
-nav.ess.side-nav ul li.active::after {
-  content: '';
-  display: block;
-  background: color(blue);
-  position: absolute;
-  top : calc(50% - 15px);
-  right: 0;
-  width: 3px;
-  height: 30px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+nav.ess.side-nav.dark ul li a {
+  color: map-get($sideNav, dark-list-item-color);
 }
 
 nav.ess.side-nav ul li a:hover {
-  background: #f6f6f6;
+  background: map-get($sideNav, light-list-selection-color);
 }
+
+nav.ess.dark.side-nav ul li a:hover {
+  background: rgba(map-get($sideNav, dark-list-selection-color), 0.25);
+}
+
+nav.ess.side-nav ul li::after {
+  right: 0;
+  width: 0px;
+  content: '';
+  height: 30px;
+  position: absolute;
+  top : calc(50% - 15px);
+  border-radius: 10px 0 0 10px;
+  transition: all 300ms ease-in-out;
+}
+
+nav.ess.side-nav ul li.active::after {
+  width: 4px;
+}
+
+// nav.ess.side-nav ul li.header-menu {
+//   font-size: 14px;
+//   color: #444444;
+//   padding: 10px 0 15px 25px;
+// }
+
+// nav.ess.side-nav ul li.header-menu div{
+//   margin-bottom: 20px;
+// }
+
+// nav.ess.side-nav ul li.header-menu::after {
+//   bottom: 0;
+//   content: '';
+//   height: 1px;
+//   left: -10px;
+//   width: 220px;
+//   margin-top: 20px; 
+//   position: relative;
+//   display: block!important;
+//   box-shadow: none!important;
+//   background: #cccccc!important;
+// }
+
+// nav.ess.side-nav ul li.header-menu .background{
+//   background: #444444;
+// }
+
+// nav.ess.side-nav ul li.header-menu a {
+//   padding: 5px 0 0;
+// }
 
 @each $name, $hex in $colors {
   nav.ess.side-nav.fill-#{$name} ul li.active a{
     color: color($name);
   }
-
-  // nav.ess.side-nav.fill-#{$name} ul li:hover{
-  //   color: color($name);
-  // }
 
   nav.ess.side-nav.fill-#{$name} ul li::after {
     background: color($name);

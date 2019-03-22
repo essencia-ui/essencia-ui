@@ -1,3 +1,15 @@
+@import "./mixins/colors";
+
+$navHeader: (
+  dark-border-color: #000000,
+  dark-shadow-color: #000000,
+  dark-background-color: #262626,
+
+  light-border-color: #C8CFDB,
+  light-shadow-color: #C8CFDB,
+  light-background-color: #FFFFFF,
+);
+
 header.ess {
   top: 0px;
   left: 0px;
@@ -5,17 +17,29 @@ header.ess {
   height: 80px;
   z-index: 999;
   padding: 15px;
-  position: fixed;
-  background: #FFFFFF;
   display: flex;
+  position: fixed;
+  background: map-get($navHeader, light-background-color);
+}
+
+header.ess.dark {
+  background: map-get($navHeader, dark-background-color);
 }
 
 header.ess.border {
-  border-bottom: 1px solid #C8CFDB;
+  border-bottom: 1px solid rgba(map-get($navHeader, light-border-color), 0.6);
+}
+
+header.ess.dark.border {
+  border-bottom: 1px solid rgba(map-get($navHeader, dark-border-color), 0.2);
 }
 
 header.ess.shadow {
-  box-shadow: 0px 4px 16px rgba(200, 207, 219, 0.75);
+  box-shadow: 1px 4px 16px 0px rgba(map-get($navHeader, light-shadow-color), 0.75);
+}
+
+header.ess.dark.shadow {
+  box-shadow: 0px 4px 16px 0px rgba(map-get($navHeader, dark-shadow-color), 0.25);
 }
 
 header.ess section nav ul {
@@ -26,24 +50,49 @@ header.ess .left-section {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 
 header.ess .right-section {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 }
 
 header.ess .item {
-  display: inline-block;
   padding: 0 10px;
   align-items: center;
+  display: inline-block;
   justify-content: center;
   background: transparent;
+}
+
+header.ess .item .title {
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #444444;
+  font-weight: bold;
+  line-height: 100%;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+}
+
+header.ess.dark .item .title {
+  color: #ffffff;
+}
+
+header.ess .item .header-menu {
+  font-size: 14px;
+  cursor: pointer;
+  color: #444444;
+  font-weight: normal;
+  line-height: normal;
+  display: inline-block;
 }
 
 header.ess .item a {
@@ -57,31 +106,40 @@ header.ess .item a {
   transition: all 150ms ease-in-out;
 }
 
+header.ess.dark .item a {
+  color: darken(#ffffff, 30%);
+}
+
 header.ess .item a:hover {
-  // color: #444444;
-  color: #0084FF;
+  color: #444444;
 }
 
-header.ess .item .title {
-  font-size: 14px;
-  color: #444444;
-  font-weight: bold;
-  font-style: normal;
-  text-align: center;
-  margin: 0;
-  line-height: 100%;
-  vertical-align: middle;
-}
-
-header.ess .item .header-menu {
-  font-weight: normal;
-  line-height: normal;
-  font-size: 14px;
-  color: #444444;
-  cursor: pointer;
-  display: inline-block;
+header.ess.dark .item a:hover {
+  color: #ffffff;
 }
 
 header.ess .item .header-menu img {
   margin-right: 15px;
+}
+
+@each $name, $hex in $colors {
+  header.ess.fill-#{$name} {
+    background: color($name);
+  }
+
+  header.ess.fill-#{$name}.border {
+    border-bottom: 1px solid darken(color($name), 5%);
+  }
+
+  header.ess.fill-#{$name} .item .title {
+    color: #ffffff;
+  }
+
+  header.ess.fill-#{$name} .item a {
+    color: #ffffff;
+  }
+  
+  header.ess.fill-#{$name} .item a:hover {
+    opacity: 0.8;
+  }
 }

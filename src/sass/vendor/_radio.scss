@@ -1,6 +1,16 @@
 @import "./mixins/colors";
 @import "./mixins/checkers";
 
+$radio: (
+  dark-font-color: #7e7e7e,
+  dark-border-color: #222222,
+  dark-background-color: #222222,
+
+  light-font-color: #C8CFDB,
+  light-border-color: #C8CFDB,
+  light-background-color: #C8CFDB,
+);
+
 .ess.radio {
   margin: 0 10px;
   font-weight: 500;
@@ -17,8 +27,12 @@
   cursor: pointer;
   transition: .15s;
   appearance: none;
-  border: 2px solid #444444;
   @include checker(20px, 20px, 0, 0, 100%);
+  border: 2px solid map-get($radio, light-border-color);
+}
+
+.ess.radio.dark input[type=radio] {
+  border: 2px solid map-get($radio, dark-border-color);
 }
 
 .ess.radio input[type=radio]:checked {
@@ -28,8 +42,12 @@
 .ess.radio input[type=radio]::after {
   opacity: 0;
   content: '';
-  background: #333333;
+  background: map-get($radio, light-border-color);
   @include checker(12px, 12px, 2px, 2px, 100%);
+}
+
+.ess.radio.dark input[type=radio]::after {
+  background: map-get($radio, dark-border-color);
 }
 
 .ess.radio input[type=radio]:checked::after {
@@ -41,6 +59,11 @@
   cursor: pointer;
   font-size: 14px;
   vertical-align: middle;
+  color: map-get($radio, light-font-color);
+}
+
+.ess.radio.dark label {
+  color: map-get($radio, dark-font-color);
 }
 
 @keyframes pulse {

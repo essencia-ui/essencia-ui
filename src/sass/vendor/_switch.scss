@@ -1,6 +1,15 @@
 @import "./mixins/colors";
 @import "./mixins/checkers";
 
+$switch: (
+  dark-font-color: #7e7e7e,
+  dark-border-color: #222222,
+  dark-background-color: #222222,
+
+  light-font-color: #C8CFDB,
+  light-border-color: #C8CFDB,
+  light-background-color: #C8CFDB,
+);
 
 .ess.switch {
   margin: 0 10px;
@@ -24,19 +33,42 @@
   cursor: pointer;
   transition: .15s;
   appearance: none;
-  border: 2px solid #444444;
+  border: 2px solid map-get($switch, light-border-color);
   @include checker(40px, 20px, 0, 0, 100px);
+}
+
+.ess.switch.dark input[type=checkbox] {
+  border: 2px solid map-get($switch, dark-border-color);
+}
+
+.ess.switch input[type=checkbox]:checked {
+  background: map-get($switch, light-background-color);
+}
+
+.ess.switch.dark input[type=checkbox]:checked {
+  background: map-get($switch, dark-background-color);
 }
 
 .ess.switch input[type=checkbox]::after {
   content: '';
-  background: #333333;
+  background: #FFFFFF;
   @include checker(12px, 12px, 2px, 2px, 100px);
   animation: uncheck-switch 150ms forwards ease-in-out;
 }
 
 .ess.switch input[type=checkbox]:checked::after {
   animation: check-switch 150ms forwards ease-in-out;
+}
+
+.ess.switch label {
+  cursor: pointer;
+  font-size: 14px;
+  vertical-align: middle;
+  color: map-get($checkbox, light-font-color);
+}
+
+.ess.switch.dark label {
+  color: map-get($checkbox, dark-font-color);
 }
 
 @keyframes check-switch {

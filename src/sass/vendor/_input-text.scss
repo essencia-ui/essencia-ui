@@ -1,3 +1,13 @@
+$inputText: (
+  dark-font-color: #7e7e7e,
+  dark-border-color: #222222,
+  dark-background-color: #222222,
+
+  light-font-color: #C8CFDB,
+  light-border-color: #C8CFDB,
+  light-background-color: #C8CFDB,
+);
+
 input[type=tel].ess,
 input[type=url].ess,
 input[type=text].ess,
@@ -26,6 +36,21 @@ input[type=datetime-local].ess {
   transition: 200ms all ease-in;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
+}
+
+input[type=tel].ess.dark,
+input[type=url].ess.dark,
+input[type=text].ess.dark,
+input[type=date].ess.dark,
+input[type=time].ess.dark,
+input[type=week].ess.dark,
+input[type=email].ess.dark,
+input[type=month].ess.dark,
+input[type=number].ess.dark,
+input[type=search].ess.dark,
+input[type=password].ess.dark,
+input[type=datetime-local].ess.dark {
+  border: 1px solid map-get($inputText, dark-border-color)
 }
 
 input[type=tel].ess::placeholder,
@@ -165,7 +190,7 @@ input[type=datetime-local].ess.pill {
   input[type=search].ess.border-#{$name},
   input[type=password].ess.border-#{$name},
   input[type=datetime-local].ess.border-#{$name} {
-    color: color($name);
+    // color: color($name);
     background: transparent;
   }
 
